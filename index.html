@@ -23,6 +23,7 @@
             align-items: center;
         }
 
+        /* Header with Horizontal Scroll */
         header {
             width: 100%;
             padding: 20px 0;
@@ -31,6 +32,8 @@
             top: 0;
             background: rgba(0, 0, 0, 0.9); /* Transparent background */
             z-index: 100;
+            overflow-x: auto;
+            white-space: nowrap; /* Prevent wrapping for horizontal scrolling */
         }
 
         .scroll-message {
@@ -40,13 +43,12 @@
         }
 
         nav ul {
-            display: flex;
-            justify-content: center;
+            display: inline-flex;
             list-style: none;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 30px; /* Spacing for horizontal scroll */
         }
 
         nav ul li a {
