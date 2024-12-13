@@ -14,13 +14,18 @@
         }
 
         body {
-            min-height: 100vh;
+            min-height: 200vh; /* Extra height for scrolling */
+            width: 90%; /* Wider body width */
+            max-width: 1400px;
+            margin: 0 auto;
             background: black;
             color: yellow;
-            overflow-y: auto;
+            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 17px; /* Increased font size by 1 point */
+            line-height: 2em;
         }
 
         /* Responsive Header */
@@ -34,24 +39,23 @@
             z-index: 100;
         }
 
-        .scroll-message {
-            margin-top: 5px;
-            font-size: 16px;
+        .in-progress {
+            font-size: 18px;
             letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
         nav ul {
             display: flex;
             justify-content: space-between;
             list-style: none;
-            flex-wrap: nowrap; /* Keep items horizontal */
             width: 100%;
-            overflow-x: auto;
+            flex-wrap: nowrap;
         }
 
         nav ul li {
             margin: 0 10px;
-            flex-shrink: 0; /* Prevent shrinking on smaller screens */
+            flex-shrink: 0; 
         }
 
         nav ul li a {
@@ -60,11 +64,17 @@
             font-size: 16px;
             font-weight: bold;
             transition: color 0.3s ease;
-            white-space: nowrap; /* Prevent line breaks */
+            white-space: nowrap; 
         }
 
         nav ul li a:hover {
             color: #00bcd4;
+        }
+
+        .scroll-message {
+            margin-top: 10px;
+            font-size: 16px;
+            letter-spacing: 2px;
         }
 
         /* Stars Background */
@@ -93,9 +103,10 @@
 
         .scroll-container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin-top: 180px;
             perspective: 800px;
+            padding-bottom: 200vh; /* Scroll past the main content */
         }
 
         .scroll-text {
@@ -117,7 +128,7 @@
         }
 
         section {
-            margin: 100px 0;
+            margin: 200px 0; /* Increased space between sections */
             scroll-margin-top: 180px; 
         }
 
