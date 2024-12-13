@@ -23,38 +23,38 @@
             align-items: center;
         }
 
-        /* Header with Horizontal Scroll */
+        /* Responsive Header */
         header {
             width: 100%;
-            padding: 20px 0;
+            padding: 15px 5%;
             text-align: center;
             position: fixed;
             top: 0;
-            background: rgba(0, 0, 0, 0.9); /* Transparent background */
+            background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
             z-index: 100;
-            overflow-x: auto;
-            white-space: nowrap; /* Prevent wrapping for horizontal scrolling */
         }
 
         .scroll-message {
-            margin-top: 10px;
-            font-size: 18px;
+            margin-top: 5px;
+            font-size: 16px;
             letter-spacing: 2px;
         }
 
         nav ul {
-            display: inline-flex;
+            display: flex;
+            justify-content: space-evenly;
             list-style: none;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
 
         nav ul li {
-            margin: 0 30px; /* Spacing for horizontal scroll */
+            margin: 10px;
         }
 
         nav ul li a {
             color: yellow;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             transition: color 0.3s ease;
         }
@@ -128,7 +128,7 @@
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 8px;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
             margin: auto;
         }
@@ -156,6 +156,27 @@
 
         button:hover {
             background: #0097a7;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px;
+            }
+
+            .scroll-container {
+                width: 90%;
+            }
+
+            .scroll-text {
+                font-size: 1.5em;
+                line-height: 2em;
+            }
         }
     </style>
 </head>
