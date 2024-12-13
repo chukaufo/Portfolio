@@ -4,39 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuka's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Orbitron', sans-serif;
         }
 
         body {
             min-height: 100vh;
-            overflow-y: auto;
-            overflow-x: hidden;
-            color: white;
-            padding: 0 10%;
             background: black;
-            position: relative;
+            color: yellow;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            /*justify-content: center;*/
-        }
-        
-        p {
-            line-height: 2;
         }
 
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.9); /* Transparent background */
+            z-index: 100;
+        }
+
+        .scroll-message {
+            margin-top: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Stars Background */
         .stars {
-            position: absolute;
+            position: fixed;
             width: 100%;
             height: 100%;
-            pointer-events: none;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
         .star {
@@ -53,93 +85,41 @@
             50% { opacity: 1; }
         }
 
-        header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #00bcd4;
-        }
-
-        main {
-            text-align: center;
+        .scroll-container {
             width: 100%;
-            max-width: 1200px;
-            padding: 50px 0;
+            max-width: 900px;
+            margin-top: 180px;
+            perspective: 800px;
+        }
+
+        .scroll-text {
+            font-size: 2em;
+            text-align: center;
+            line-height: 2.5em; /* Double Spacing */
+            transform-origin: 50% 100%;
+            transform: rotateX(25deg);
+        }
+
+        h1, h2, h3, p, li, label, button {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        main, footer {
+            text-align: center;
         }
 
         section {
-            margin: 50px 0;
+            margin: 100px 0;
+            scroll-margin-top: 180px; /* Adjust for fixed header */
         }
 
-                .subsection {
-            margin-bottom: 30px;
-        }
-        
-        .subsection h3 {
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-size: 18px;
-        }
-        
-        .subsection ul {
-            list-style-type: disc;
-            padding-left: 25px;
-        }
-        
-        .subsection ul li {
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
-
-        
-        h1, h2 {
-            margin-bottom: 20px;
-            font-family: 'Arial', sans-serif;
+        .project-list, .subsection ul {
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        
-        h3 {
-            margin-bottom: 15px;
-            font-family: 'Verdana', sans-serif;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-
-        .project-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        ul {
-            list-style-type: disc;
-            text-align: center;
+            list-style-type: none;
             display: inline-block;
+            padding: 0;
         }
 
         form {
@@ -175,73 +155,59 @@
         button:hover {
             background: #0097a7;
         }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .in-progress {
-            text-align: center;
-            font-size: 18px;
-            color: #f39c12;
-            margin-bottom: 10px;
-        }
-
     </style>
 </head>
 <body>
-    <div class="stars"></div>
-    <script>
-        const starContainer = document.querySelector('.stars');
 
-        function createStar() {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.animationDuration = `${Math.random() * 3 + 1}s`;
-            starContainer.appendChild(star);
-        }
+<header>
+    <p class="in-progress">Portfolio Still in Progress...</p>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="https://chukauwefoh.github.io/resume/" target="_blank">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <p class="scroll-message">Please Scroll</p>
+</header>
 
-        for (let i = 0; i < 150; i++) {
-            createStar();
-        }
-    </script>
+<div class="stars"></div>
+<script>
+    const starContainer = document.querySelector('.stars');
+    function createStar() {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        starContainer.appendChild(star);
+    }
+    for (let i = 0; i < 150; i++) createStar();
+</script>
 
-    <header>
-        <p class="in-progress">Portfolio still in progress...</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="https://chukauwefoh.github.io/resume/" target="_blank">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="scroll-container">
+    <div class="scroll-text">
+        <main>
+            <section id="about">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Hi, I'm Chuka, an aspiring software developer currently pursuing my bachelor's degree in computing at Queen's University.</p>
+                <p>I am passionate about creating software that makes life easier by blending creativity with technical skills to design tools that are both functional and visually appealing.</p>
+            </section>
 
-    <main>
-        <section id="about">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Chuka, an aspiring software developer currently pursuing my bachelors degree in computing at Queen's University.</p>
-            <p>I am passionate about creating software that makes life easier, whether it’s building websites or developing apps, 
-                I enjoy turning ideas into real easy-to-use solutions. I blend creativity with technical skills to design tools that 
-                are both functional and visually appealing. My goal is to simplify complex tech into user-friendly 
-                experiences while continuously learning and improving.</p>
-        </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>Personal Finance Manager</li>
+                    <li>Flight Booking System</li>
+                    <li>Currency Converter</li>
+                </ul>
+            </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-list"></div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            
-               <div class="subsection">
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="subsection">
                     <h3>Programming Languages</h3>
                     <ul>
                         <li>Python</li>
@@ -252,48 +218,37 @@
                         <li>C/C++</li>
                     </ul>
                 </div>
-            
                 <div class="subsection">
                     <h3>Tools & Frameworks</h3>
                     <ul>
                         <li>Flask</li>
                         <li>Firebase</li>
                         <li>Qt</li>
-                        <li>SketchUp</li>
                         <li>Figma</li>
-                        <li>Selenium WebDriver</li>
+                        <li>Selenium</li>
                     </ul>
                 </div>
-            
-                <div class="subsection">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>SEO</li>
-                        <li>UI & UX Design</li>
-                    </ul>
-                </div>
-            
-        </section>
+            </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </main>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <footer>
+            <p>&copy; 2024 Chuka. All Rights Reserved.</p>
+        </footer>
+    </div>
+</div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Chuka. All rights reserved.</p>
-    </footer>
 </body>
 </html>
