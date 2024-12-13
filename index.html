@@ -119,13 +119,18 @@
             text-align: center;
             line-height: 2.5em; 
             transform-origin: 50% 100%;
-            transform: rotateX(25deg);
+            transform: rotateX(15deg);
         }
 
-        h1, h2, h3, p, li, label, button {
+        h1, h2, h3 {
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
+        }
+
+        p, li, label, button{
+            letter-spacing: 2px;
+            margin-bottom: 23px;
         }
 
         main, footer {
@@ -177,6 +182,11 @@
         button:hover {
             background: #0097a7;
         }
+
+        #content {
+            transition: opacity 0.2s ease-in-out;
+        }
+
     </style>
 </head>
 <body>
@@ -207,8 +217,31 @@
         starContainer.appendChild(star);
     }
     for (let i = 0; i < 150; i++) createStar();
-</script>
 
+    window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Check if the user has scrolled to the bottom
+    if (scrollPosition >= documentHeight - 1) {
+        // Fade out content quickly
+        document.getElementById("content").style.opacity = "0";
+
+        // Scroll to top immediately
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 75);  // Reduced delay from 300ms to 100ms
+
+        // Fade in content after scroll completes
+        setTimeout(() => {
+            document.getElementById("content").style.opacity = "1";
+        }, 500);  // Reduced delay from 2000ms to 1000ms
+    }
+});
+
+
+</script>
+<div id="content">
 <div class="scroll-container">
     <div class="scroll-text">
         <main>
@@ -278,6 +311,7 @@
             <p>&copy; 2024 Chuka. All Rights Reserved.</p>
         </footer>
     </div>
+</div>
 </div>
 
 </body>
