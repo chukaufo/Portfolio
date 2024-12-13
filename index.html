@@ -15,16 +15,41 @@
         
         body {
             min-height: 100vh;
-            overflow-y: auto;
-            overflow-x: hidden;
-            color: white;
-            padding: 0 10%;
+            overflow: hidden;
+            color: yellow;
             background: black;
-            position: relative;
+            perspective: 800px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
+        }
+        
+        .scroll-container {
+            width: 80%;
+            max-width: 900px;
+            height: 100vh;
+            overflow: hidden;
+            position: absolute;
+        }
+        
+        .scroll-text {
+            font-size: 2em;
+            text-align: center;
+            line-height: 2em;
+            transform-origin: 50% 100%;
+            transform: rotateX(20deg);
+            animation: scroll 40s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% {
+                top: 100%;
+                transform: translateY(100%) rotateX(20deg);
+            }
+            100% {
+                top: -200%;
+                transform: translateY(-200%) rotateX(20deg);
+            }
         }
         
         p {
@@ -68,7 +93,7 @@
         }
         
         nav ul li a {
-            color: white;
+            color: yellow;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
@@ -183,8 +208,8 @@
             margin-bottom: 10px;
         }
 
-
     </style>
+    
 </head>
 <body>
     <div class="stars"></div>
