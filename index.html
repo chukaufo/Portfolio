@@ -15,7 +15,7 @@
 
         body {
             min-height: 200vh; 
-            width: 90%; 
+            width: 100%; 
             max-width: 1400px;
             margin: 0 auto;
             background: black;
@@ -26,12 +26,12 @@
             align-items: center;
             font-size: 30px;
             line-height: 2em;
-            padding: 0 5%;
+            padding: 0;
         }
 
         @media (max-width: 768px) {
             .wrapper {
-                padding: 0 3%; /* Adjust padding for smaller screens */
+                padding: 0; /* Adjust padding for smaller screens */
             }
         }
 
@@ -144,8 +144,11 @@
         }
 
         section {
-            margin: 200px 0;
             scroll-margin-top: 300px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 200px auto;
+            text-align: center;
         }
 
         .project-list, .subsection ul {
@@ -191,6 +194,10 @@
 
         #content {
             transition: opacity 0.2s ease-in-out;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .image-container {
