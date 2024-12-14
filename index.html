@@ -24,22 +24,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 17px;
+            font-size: 30px;
             line-height: 2em;
         }
 
         /* Header Styling */
         header {
             width: 100%;
-            padding: 15px 5%;
+            padding: 15px 5%;  /* Original padding */
             text-align: center;
             position: fixed;
             top: 0;
             left: 0;
             background: rgba(0, 0, 0, 0.9); 
             z-index: 100;
-            overflow-x: auto; 
-            white-space: nowrap; 
         }
 
         .in-progress {
@@ -122,6 +120,7 @@
             transform: rotateX(15deg);
         }
 
+
         h1, h2, h3 {
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -139,7 +138,7 @@
 
         section {
             margin: 200px 0;
-            scroll-margin-top: 200px; 
+            scroll-margin-top: 300px;
         }
 
         .project-list, .subsection ul {
@@ -187,6 +186,23 @@
             transition: opacity 0.2s ease-in-out;
         }
 
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            outline: 5px solid yellow;
+        }
+        .caption {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -199,6 +215,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="https://chukauwefoh.github.io/resume/" target="_blank">Resume</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -249,6 +266,7 @@
                 <h1>Welcome to My Portfolio</h1>
                 <p>Hi, I'm Chuka, an aspiring software developer currently pursuing my bachelor's degree in computing at Queen's University.</p>
                 <p>I am passionate about creating software that makes life easier by blending creativity with technical skills to design tools that are both functional and visually appealing.</p>
+                
             </section>
 
             <section id="projects">
@@ -292,7 +310,13 @@
                     </ul>
                 </div>
             </section>
-
+            <section id="hobbies">
+            <h2>Hobbies</h2>
+            <div class="image-container">
+                    <img src="images/me.jpg" alt="Picture of me by the lake">
+                    <div class="caption">"Peace by the water — where tranquility meets the soul."</div>
+                </div>
+            </section>
             <section id="contact">
                 <h2>Contact</h2>
                 <form action="#" method="POST">
@@ -304,6 +328,7 @@
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
+                
             </section>
         </main>
 
