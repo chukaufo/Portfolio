@@ -116,7 +116,7 @@
 
         .scroll-text {
             font-size: 2em;
-            text-align: center;
+            text-align: center; !important;
             line-height: 2.5em; 
             transform-origin: 50% 100%;
             transform: rotateX(15deg);
@@ -133,6 +133,7 @@
         @media (max-width: 768px) {
             h1, h2, h3 {
                 text-align: center !important;
+                width: 100% !important;  /* Prevent clipping */
             }
         }
 
