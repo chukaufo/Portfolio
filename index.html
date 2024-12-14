@@ -15,18 +15,17 @@
 
         body {
             min-height: 200vh; 
-            width: 100%; 
-            max-width: 1400px;
+            width: 100%;  /* Full width */
+            max-width: 100vw;  /* Prevent overflow */
             margin: 0 auto;
             background: black;
             color: yellow;
-            overflow-x: hidden;
+            overflow-x: hidden;  /* Remove horizontal scroll */
             display: flex;
             flex-direction: column;
             align-items: center;
             font-size: 30px;
             line-height: 2em;
-            padding: 0;
         }
 
         @media (max-width: 768px) {
@@ -144,11 +143,11 @@
         }
 
         section {
-            scroll-margin-top: 300px;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto 200px auto;
+            max-width: 1200px;  /* Limit width */
+            margin: 0 auto 200px auto;  /* Center and add space */
             text-align: center;
+            scroll-margin-top: 300px;
         }
 
         .project-list, .subsection ul {
@@ -198,6 +197,8 @@
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+            padding: 0 5%;  /* Prevent content sticking to edges */
+            overflow: hidden;  /* Remove any extra overflow */
         }
 
         .image-container {
