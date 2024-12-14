@@ -120,22 +120,19 @@
             line-height: 2.5em; 
             transform-origin: 50% 100%;
             transform: rotateX(15deg);
+            width: 100%;
         }
 
 
         h1, h2, h3 {
+            width: 100%;
+            text-align: center;   /* Default Centering */
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
-            text-align: center;  
         }
 
-        @media (max-width: 768px) {
-            h1, h2, h3 {
-                text-align: center !important;
-                width: 100% !important;  /* Prevent clipping */
-            }
-        }
+       
 
         p, li, label, button{
             letter-spacing: 2px;
