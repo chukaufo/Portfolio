@@ -130,6 +130,8 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
+            display: block;
+            margin: 20px 0;   /* Avoid conflicting margins */
         }
 
        
@@ -199,6 +201,12 @@
             padding: 0 5%; /* Prevent content sticking to edges */
             margin: 180px auto 0 auto; /* Add space under header */
             text-align: center;
+        }
+
+        #content, .scroll-container, section {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;    /* Center everything inside */
         }
 
         .image-container {
