@@ -228,24 +228,39 @@
             margin-top: 10px;
         }
 
-       .linkedin-icon, .email-icon {
-            font-size: 4rem;   
-            color: yellow;     
+               
+        .contact-item {
+            outline: none;            /* Remove Default Focus Outline */
+            box-shadow: none;         /* Remove Any Box Shadow */
+        }
+        
+        /* Specifically Target Icon */
+        .contact-item i {
+            font-size: 4rem;          /* Increase Icon Size */
+            color: yellow;            /* Set Icon Color */
             font-family: "Bootstrap Icons"; 
-            background: none;  
-            box-shadow: none;  
-            border: none;      
+            background: none;         /* Remove Background */
+            border: none;             /* Remove Border */
             transition: color 0.3s ease;
         }
-
+        
+        /* Remove Red Box on Focus and Active */
+        .contact-item:focus, 
+        .contact-item:active {
+            outline: none;            /* Remove Red Box on Click */
+            box-shadow: none;         /* Reset Any Shadows */
+        }
+        
+        /* Hover Effect */
+        .contact-item:hover i {
+            color: orange; 
+        }
+        
+        /* Adjust Spacing Between Heading and Icons */
         .contact-links {
-            margin-top: -10px;  /* Reduced Spacing */
+            margin-top: -10px;        /* Reduce Spacing */
         }
-    
-        .contact-item:hover .linkedin-icon, 
-        .contact-item:hover .email-icon {
-            color: orange;    /* Change on Hover */
-        }
+
             
     </style>
     
