@@ -228,25 +228,39 @@
             margin-top: 10px;
         }
 
-               
-       .contact-item, .contact-item:focus, .contact-item:active, .contact-item:visited {
+                /* Reset All Link Styles */
+        .contact-item, .contact-item:focus, .contact-item:active, .contact-item:visited {
             all: unset;              /* Reset Everything */
             display: inline-block;   /* Ensure Correct Link Display */
-            cursor: pointer;         /* Maintain Clickable Cursor */
-       }
+            cursor: pointer;         
+            margin: 0 20px;          /* Increase Spacing Between Icons */
+        }
         
         /* Icon Styling */
         .contact-item i {
-            font-size: 4rem;         /* Icon Size */
+            font-size: 4rem;               /* Icon Size */
             font-family: "Bootstrap Icons"; 
             transition: color 0.3s ease; 
-        }
-
-                /* Hover Effect */
-        .contact-item:hover i {
-            color: orange;           /* Change Color on Hover */
+            width: 4.5rem;                 /* Square Icon Width */
+            height: 4.5rem;                /* Square Icon Height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;             /* Background Matching Body */
+            border: 2px solid yellow;      /* Add Border for Even Shape */
+            border-radius: 10%;            /* Rounded Corners */
         }
         
+        /* Hover Effect */
+        .contact-item:hover i {
+            color: orange;                 /* Change Icon Color on Hover */
+        }
+        
+        /* Adjust Space from Heading */
+        .contact-links {
+            margin-top: 10px;              /* Reduced Space from Heading */
+        }
+
        
             
     </style>
