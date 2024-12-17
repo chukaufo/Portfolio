@@ -226,6 +226,22 @@
             margin-top: 10px;
         }
 
+        .contact-links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: #FFD700; /* Yellow for both links */
+        }
+
+    .contact-links a:hover {
+            color: #FFA500; /* Orange on hover */
+        }
+
+    .contact-links i {
+            margin-right: 8px;
+        }
+
     </style>
 </head>
 <body>
@@ -345,12 +361,18 @@
                     <div class="caption">"Peace by the water — where tranquility meets the soul."</div>
                 </div>
             </section>
+
+            
             <section id="contact">
-                <h2>Contact</h2>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">Connect on LinkedIn</a></li>
-                    <li><a href="mailto:chukauwefoh2@gmail.com">Email Me</a></li>
-                </ul>
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
 
                 
             </section>
