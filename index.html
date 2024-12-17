@@ -229,38 +229,23 @@
         }
 
                
-        .contact-item {
-            outline: none;      /* Remove purple focus outline */
-            box-shadow: none;   /* Ensure no box shadow */
-            background: none;   /* Reset any background applied */
-            border: none;       /* Reset any borders */
+        .contact-item, .contact-item:focus, .contact-item:active, .contact-item:visited {
+            all: unset;              /* Reset Everything */
+            display: inline-block;   /* Ensure Correct Link Display */
+            cursor: pointer;         /* Maintain Clickable Cursor */
         }
         
-        /* Specifically Target Icon */
+        /* Icon Styling */
         .contact-item i {
-            font-size: 4rem;          /* Increase Icon Size */
-            color: yellow;            /* Set Icon Color */
+            font-size: 4rem;         /* Icon Size */
+            color: yellow;           /* Initial Icon Color */
             font-family: "Bootstrap Icons"; 
-            background: none;         /* Remove Background */
-            border: none;             /* Remove Border */
-            transition: color 0.3s ease;
-        }
-        
-        /* Remove Red Box on Focus and Active */
-        .contact-item:focus, 
-        .contact-item:active {
-            outline: none;            /* Remove Red Box on Click */
-            box-shadow: none;         /* Reset Any Shadows */
+            transition: color 0.3s ease; 
         }
         
         /* Hover Effect */
         .contact-item:hover i {
-            color: orange; 
-        }
-        
-        /* Adjust Spacing Between Heading and Icons */
-        .contact-links {
-            margin-top: -10px;        /* Reduce Spacing */
+            color: orange;           /* Change Color on Hover */
         }
 
             
