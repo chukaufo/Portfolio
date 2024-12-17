@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuka's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    
     <style>
         * {
             margin: 0;
@@ -228,25 +227,19 @@
             margin-top: 10px;
         }
 
-        .contact-links a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-        text-decoration: none;
-        color: #FFD700; /* Yellow for both links */
-        }
-
-        .contact-links a:hover {
-            color: #FFA500; /* Orange on hover */
+        .icon {
+        width: 24px;
+        height: 24px;
+        fill: #FFD700; /* Default Yellow */
+        transition: fill 0.3s;
         }
     
-        .contact-links .icon {
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900; /* Ensures proper icon rendering */
-            margin-right: 8px;
+        .contact-item:hover .icon {
+            fill: #FFA500; /* Orange on Hover */
         }
-
+        
     </style>
+    
 </head>
 <body>
 
@@ -371,11 +364,17 @@
                 
                <h2>Contact</h2>
                 <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                        <i class="fa-brands fa-linkedin icon"></i> LinkedIn
+                    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="contact-item">
+                        <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 
+                                19h-3v-10h3v10zm-1.5-11.5c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.5h-3v-5c0-1.104-.896-2-2-2s-2 .896-2 2v5h-3v-10h3v1.465c.799-1.314 2.7-2.465 
+                                4.457-2.465 2.206 0 3.543 1.702 3.543 4.125v6.875z"/>
+                        </svg> LinkedIn
                     </a>
                     <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                        <i class="icon fas fa-envelope"></i> Email
+                        <svg class="icon email" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12 12.713l11.985-8.713h-23.97l11.985 8.713zm-12-7.358v13.645l8.355-6.074-8.355-7.571zm23.985 13.645v-13.645l-8.354 6.074 8.354 7.571zm-11.985-6.786l-8.192 5.968h16.384l-8.192-5.968z"/>
+                        </svg> Email
                     </a>
                 </div>
 
