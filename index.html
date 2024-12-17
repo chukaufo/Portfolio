@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chuka's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -227,18 +229,20 @@
         }
 
         .contact-links a {
-            display: block;
-            margin: 10px 0;
-            font-size: 18px;
-            text-decoration: none;
-            color: #FFD700; /* Yellow for both links */
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+        text-decoration: none;
+        color: #FFD700; /* Yellow for both links */
         }
 
-    .contact-links a:hover {
+        .contact-links a:hover {
             color: #FFA500; /* Orange on hover */
         }
-
-    .contact-links i {
+    
+        .contact-links .icon {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900; /* Ensures proper icon rendering */
             margin-right: 8px;
         }
 
@@ -365,15 +369,15 @@
             
             <section id="contact">
                 
-           <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                    <i class="fa-solid fa-envelope"></i> Email
-                </a>
-            </div>
+               <h2>Contact</h2>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
+                        <i class="icon fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
+                        <i class="icon fas fa-envelope"></i> Email
+                    </a>
+                </div>
 
                 
             </section>
