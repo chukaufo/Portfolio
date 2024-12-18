@@ -195,11 +195,16 @@
         }
 
 
-        .outlined-image {
-            width: auto; /* Set the width of the image */
-            height: 300px; /* Maintain aspect ratio */
-            border: 2px solid yellow; /* Yellow outline for the image */
-            border-radius: 5px; /* Rounds the corners of the image */
+        outlined-image {
+            width: auto;                /* Make the image responsive */
+            max-width: 100%;            /* Prevent the image from exceeding its container */
+            max-height: 300px; 
+            height: 100%;               /* Maintain aspect ratio */
+            border: 2px solid yellow;   /* Yellow outline for the image */
+            border-radius: 5px;         /* Rounds the corners of the image */
+            object-fit: contain;  
+            box-sizing: border-box;
+            
         }
 
 
