@@ -195,15 +195,18 @@
         }
 
 
-        outlined-image {
-            width: auto;                /* Make the image responsive */
+        .outlined-image {
+            width: 100%;                /* Make the image responsive */
             max-width: 100%;            /* Prevent the image from exceeding its container */
             max-height: 300px; 
-            height: 100%;               /* Maintain aspect ratio */
-            border: 2px solid yellow;   /* Yellow outline for the image */
+            height: auto;               /* Maintain aspect ratio */
+            outline: yellow;
             border-radius: 5px;         /* Rounds the corners of the image */
             object-fit: contain;  
             box-sizing: border-box;
+            display: block;             /* Ensure no extra space below the image */
+            margin: 0;                  /* Remove any default margin */
+            padding: 0;  
             
         }
 
