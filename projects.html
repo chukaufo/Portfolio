@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuka's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            min-height: 100vh; 
+            width: 100%; 
+            max-width: 100vw;  /* Prevent horizontal scroll */
+            margin: 0 auto;
+            background: black;
+            color: yellow;
+            overflow-x: hidden;  /* Prevent horizontal scrolling */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 15px;
+            line-height: 2em;
+            padding-top: 1000px;
+        }
+
+        
+        /* Header Styling */
+        header {
+            width: 100%;
+            padding: 15px 5%;  /* Original padding */
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9); 
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            width: 100%;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            flex-shrink: 0; 
+        }
+
+        nav ul li a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .scroll-message {
+            margin-top: 10px;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        /* Stars Background */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+         h1, h2, h3 {
+            width: 100%;
+            text-align: center;   /* Default Centering */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+            margin: 20px 0;   /* Avoid conflicting margins */
+        }
+
+       
+
+        p, li, label, button{
+            letter-spacing: 2px;
+            margin-bottom: 23px;
+        }
+
+        main, footer {
+            text-align: center;
+        }
+
+        section {
+            scroll-margin-top: 200px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 200px auto;  /* Center and add space */
+            text-align: center;
+            border: 2px solid yellow;
+            padding: 20px;
+            padding-bottom: 0px;
+        }
+
+        .project-list, .subsection ul {
+            text-align: center;
+            list-style-type: none;
+            display: inline-block;
+            padding: 0;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .item-box {
+            display: flex; /* Use flexbox to arrange items side by side */
+            padding: 10px; /* Padding inside the box */
+            border: 2px solid yellow; /* Yellow outline */
+            background-color: transparent; /* Transparent background */
+            color: yellow; /* Text color */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            margin: 0 -20px; /* Counteract the negative padding of the parent */
+            }
+
+        .item {
+            padding: 10px 15px; /* Padding for each item */
+            margin: 0 5px; /* Margin between items */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s; /* Transition effects */
+        }
+
+        .item:hover {
+            background-color: yellow; /* Yellow background on hover */
+            color: black; /* Change text color to black on hover */
+        }
+
+        .subheading {
+            font-size: 18px; /* Adjust the font size as needed */
+            font-weight: bold; /* Make the text bold */
+            margin-top: 10px;
+            margin-bottom: 20px; /* Space between the subheading and the items */
+            color: yellow; /* Text color */
+            text-align: center; /* Align text to the left (or center, as needed) */
+        }
+
+
+        .outlined-image {
+            width: 500px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid yellow; /* Yellow outline for the image */
+            border-radius: 5px; /* Rounds the corners of the image */
+        }
+
+
+        /* Icon Styling */
+
+        .link-item {
+            overflow: hidden; /* Hide any overflow */
+            height: 4.5rem;   /* Set the height to match the icon */
+            display: flex;    /* Ensure it remains a flex container */
+            justify-content: center;
+            align-items: center; /* Center the icon vertically */
+            margin-left: auto;
+        }
+        .link-item i {
+            font-size: 4rem;               /* Icon Size */
+            font-family: "Bootstrap Icons"; 
+            color: yellow;
+            transition: color 0.3s ease; 
+            width: 4.5rem;  
+            font-size: 60px;               /* Square Icon Width */
+            height: 4.5rem;                /* Square Icon Height */
+            display: flex;
+            justify-content: center;
+            align-items: right;
+            background: transparent;             /* Background Matching Body */
+            /*border: 2px solid yellow;      /* Add Border for Even Shape */
+            border-radius: 10%;            /* Rounded Corners */
+            margin-bottom: -18px;
+        }
+        
+        /* Hover Effect */
+        .link-item:hover i {
+            color: orange;                 /* Change Icon Color on Hover */
+        }
+        
+        /* Adjust Space from Heading */
+        .link-links {
+            margin-top: 10px;              /* Reduced Space from Heading */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+   
+    <nav>
+        <h1>Projects</h1>
+        <ul>
+            <li><a href="portifolio.html">Portfolio</a></li>
+            <li><a href="#converter">Currency Converter</a></li>
+            <li><a href="#pfm">Personal Finance Manager</a></li>
+        </ul>
+    </nav>
+</header>
+    
+    <div class="stars"></div>
+    <script>
+    const starContainer = document.querySelector('.stars');
+    function createStar() {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        starContainer.appendChild(star);
+    }
+    for (let i = 0; i < 150; i++) createStar();
+
+</script>
+
+<section id="converter">
+    <h2>Currency Converter</h2>
+    <img src="images/currencyCon.png" alt="Currency Converter." class="outlined-image">
+
+    <p>The Currency Converter is a Java desktop application with a graphical user interface built using JavaFX. It retrieves real-time exchange rates from a Live Exchange Rate API, enabling accurate and efficient currency conversions. Users can select currencies, input amounts, and view instant conversion results through a clean and intuitive interface. This project enhanced my skills in Java application development, API integration, and creating responsive user interfaces with JavaFX.</p>
+    <div class="item-box">
+        <div class="subheading">Skills used:</div>
+        <div class="item">Java</div>
+        <div class="item">JavaFx</div>
+        <div class="item">API</div>
+        <a href="https://github.com/chukauwefoh/Currency-Converter" target="_blank" class="link-item">
+                    <i class="bi bi-github"></i>
+        </a>
+    </div>
+    
+</section>
+<section id="pfm">
+    <h2>Personal Finance Manager</h2>
+    <div>
+        <img src="images/pfm.png" alt="Personal Finance Manager." class="outlined-image">
+    </div>
+    <p>The Personal Finance Manager was a group project for my Software Fundamentals course, developed using C++ with the Qt framework and SQLite for data storage. The application helps students track expenses, manage budgets, set financial goals, and plan toward achieving them. My primary role involved front-end development, where I designed and implemented the graphical user interface and spending visualization features using Qt. With its intuitive design and efficient database integration, the application aimed to enable students to take control of their personal finances and work toward their financial goals.</p>
+    <div class="item-box">
+        <div class="subheading">Skills used:</div>
+        <div class="item">C++</div>
+        <div class="item">QT</div>
+        <div class="item">SQLite</div>
+        <div class="item">CMake</div>
+
+    </div>
+
+</section>
+</body>
