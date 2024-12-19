@@ -38,7 +38,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 ## Contact
 For more information, reach out to me:
 - **Email:** chukauwefoh2@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/chuka-uwefoh-6183b3277)
+- **LinkedIn:** [My LinkedIn Profile](https://www.linkedin.com/in/chuka-uwefoh-6183b3277)
 - **Portfolio Website:** [Portifolio](https://chukauwefoh.github.io/Portifolio/)
 
 Thank you for visiting!
