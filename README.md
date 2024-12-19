@@ -30,7 +30,8 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 ---
 
-## ContributingContributions are welcome! If you have suggestions or spot issues, please submit a pull request or open an issue on GitHub.
+## Contributing
+Contributions are welcome! If you have suggestions or spot issues, please submit a pull request or open an issue on GitHub.
 
 
 ---
