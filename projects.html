@@ -164,13 +164,15 @@
         }
 
         .item-box {
-            display: flex; /* Use flexbox to arrange items side by side */
-            padding: 10px; /* Padding inside the box */
-            border: 2px solid yellow; /* Yellow outline */
+            display: flex;              /* Arrange items side by side */
+            flex-wrap: wrap;            /* Ensure items wrap to next line if needed */
+            padding: 10px;              /* Padding inside the box */
+            border: 2px solid yellow;   /* Yellow outline */
             background-color: transparent; /* Transparent background */
-            color: yellow; /* Text color */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            margin: 0 -20px; /* Counteract the negative padding of the parent */
+            color: yellow;              /* Text color */
+            box-sizing: border-box;     /* Include padding & border in width/height */
+            margin: 0 -20px;            /* Adjust margin */
+            position: relative;         /* Reference point for absolute positioning */
             }
 
         .item {
@@ -180,7 +182,7 @@
             transition: background-color 0.3s, color 0.3s; /* Transition effects */
         }
 
-        .item:hover {
+        .item:hover, .item:active {
             background-color: yellow; /* Yellow background on hover */
             color: black; /* Change text color to black on hover */
         }
@@ -211,38 +213,48 @@
         }
 
 
-        link-item {
-            overflow: hidden;
-            height: 4.5rem;
+        
+        .link-item {
+            height: 3rem;        /* Slightly smaller for mobile */
+            width: 3rem;         /* Consistent width */
             justify-content: center;
             align-items: center;
-            margin-left: auto;
             display: flex;
-        }
-        
-        .github-icon {
-            width: 4.5rem;
-            height: 4.5rem;
-            fill: yellow;
-            transition: fill 0.3s ease;
-            border-radius: 10%;
-            margin-bottom: -18px;
-        }
-        
-        .link-item:hover .github-icon {
-            fill: orange;
-        }
-        
-        @media (max-width: 768px) {
-            .size-guide-link {
-                position: relative;
-                top: -20px;
-                margin-bottom: 10px;
-                display: block;
-                text-align: center;
-            }
+            position: absolute;  /* Relative to .item-box */
+            bottom: 20px;         /* Distance from the bottom */
+            right: 8px;          /* Distance from the right */
         }
 
+        /* SVG Icon */
+        .github-icon {
+            width: 3rem;         /* Reduced width */
+            height: 3rem;        /* Reduced height */
+            fill: yellow;        /* Default color */
+            transition: fill 0.3s ease;
+            border-radius: 10%;  /* Rounded corners */
+        }
+
+        .link-item:hover .github-icon {
+            fill: orange;  /* Change color on hover */
+        }
+
+        /* Mobile-Responsive Styles */
+        @media (max-width: 768px) {
+            .item-box {
+                width: 100%;   /* Full width for mobile */
+                padding: 8px;  /* Reduce padding */
+            }
+            .link-item {
+                height: 2.5rem;   /* Smaller icon */
+                width: 2.5rem;    /* Smaller icon */
+                bottom: 10px;      /* Adjust position */
+                right: 6px;       /* Adjust position */
+            }
+            .github-icon {
+                width: 2.5rem;  /* Smaller SVG */
+                height: 2.5rem; /* Smaller SVG */
+            }
+        }
         
     </style>
 </head>
