@@ -166,13 +166,13 @@
         .item-box {
             display: flex;              /* Arrange items side by side */
             flex-wrap: wrap;            /* Ensure items wrap to next line if needed */
-            padding: 10px;              /* Padding inside the box */
-            border: 2px solid yellow;   /* Yellow outline */
+            padding: 10px 0;            /* Top and bottom padding only */
+            border-top: 2px solid yellow;  /* Top border only */
             background-color: transparent; /* Transparent background */
             color: yellow;              /* Text color */
-            box-sizing: border-box;     /* Include padding & border in width/height */
-            margin: 0 -20px;            /* Adjust margin */
-            position: relative;         /* Reference point for absolute positioning */
+            box-sizing: border-box;     /* Include padding in width/height */
+            width: 100%;                /* Stretch across the section */
+            position: relative;         /* Reference for absolute positioning */
             }
 
         .item {
