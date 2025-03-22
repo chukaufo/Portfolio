@@ -23,7 +23,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 ## How to Use
 - **Explore Projects:** Navigate through my projects and click for detailed views.
-- **View Resume:** Access the resume section on my Portifolio.
+- **View Resume:** Access the resume section on my Portfolio.
 
 
 [Visit My Portfolio Website](https://chukauwefoh.github.io/Portfolio/)
