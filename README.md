@@ -40,7 +40,7 @@ Contributions are welcome! If you have suggestions or spot issues, please submit
 For more information, reach out to me:
 - **Email:** chukauwefoh2@gmail.com
 - **LinkedIn:** [My LinkedIn Profile](https://www.linkedin.com/in/chuka-uwefoh-6183b3277)
-- **Portfolio Website:** [Portifolio](https://chukauwefoh.github.io/Portifolio/)
+- **Portfolio Website:** [Portfolio](https://chukauwefoh.github.io/Portfolio/)
 
 Thank you for visiting!
 
