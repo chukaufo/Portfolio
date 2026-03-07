@@ -1,119 +1,114 @@
-<nav>
-<ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuka | Experience</title>
 
-<li>
-<a href="index.html">
-<i class="bi bi-person"></i> About
-</a>
-</li>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Chuka</a>
 
-<li class="dropdown">
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
+          </a>
+        </li>
 
-<a href="work.html">
-<i class="bi bi-code-slash"></i> Work
-</a>
+        <li class="dropdown">
+          <button class="dropdown-toggle" type="button">
+            <span class="nav-link-inner">
+              <i class="bi bi-code-slash"></i>
+              <span>Software Projects</span>
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </button>
 
-<ul class="dropdown-menu">
-<li>
-<a href="work.html#projects">
-<i class="bi bi-kanban"></i> Projects
-</a>
-</li>
+          <ul class="dropdown-menu">
+            <li><a href="work.html#projects">Projects</a></li>
+            <li><a href="work.html#skills">Skills</a></li>
+          </ul>
+        </li>
 
-<li>
-<a href="work.html#skills">
-<i class="bi bi-lightning"></i> Skills
-</a>
-</li>
-</ul>
+        <li>
+          <a href="experience.html" class="active">
+            <i class="bi bi-briefcase"></i>
+            <span>Experience</span>
+          </a>
+        </li>
 
-</li>
+     
 
-<li>
-<a href="experience.html">
-<i class="bi bi-briefcase"></i> Experience
-</a>
-</li>
+        <li>
+          <a href="resume.html" target="_blank">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>Resume</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<li>
-<a href="resume.html">
-<i class="bi bi-file-earmark-text"></i> Resume
-</a>
-</li>
+  <main class="page-content">
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Career</p>
+        <h1>Experience</h1>
+      </div>
 
-<li>
-<a href="#contact">
-<i class="bi bi-envelope"></i> Contact
-</a>
-</li>
+      <div class="experience-list">
+        <article class="experience-card">
+          <h2>Lead Software Developer</h2>
+          <p class="meta">Queen’s Black Tech • Sep 2025 – Present</p>
+        </article>
 
-</ul>
-</nav>
-<section id="experience">
+        <article class="experience-card">
+          <h2>Digital Classroom Support Staff</h2>
+          <p class="meta">Queen’s University • Sep 2025 – Present</p>
+        </article>
 
-<h2>Experience</h2>
+        <article class="experience-card">
+          <h2>Web Developer</h2>
+          <p class="meta">QWeb Development Club • Sep 2024 – Apr 2025</p>
+        </article>
 
-<div class="project-subsection">
+        <article class="experience-card">
+          <h2>Teaching Assistant, Intro to Computing</h2>
+          <p class="meta">Queen’s University • Sep 2023 – Apr 2024</p>
+        </article>
+      </div>
+    </section>
+    <section id="contact">
+                
+               <h2>Contacts</h2>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
+                        <i class="bi bi-linkedin linkedin-icon"></i>
+                    </a>
+                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
+                        <i class="bi bi-envelope email-icon"></i>
+                    </a>
+                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
+                    <i class="bi bi-github"></i>
+                    </a>
+                </div>
 
-<h3>Digital Classroom Support Staff</h3>
+                
+            </section>
+  </main>
+   <footer>
+            <p>&copy; 2026 Chuka.</p>
+        </footer>
 
-<p>Queen's University</p>
-
-<p>Sep 2025 – Present</p>
-
-</div>
-
-
-<div class="project-subsection">
-
-<h3>Lead Software Developer</h3>
-
-<p>Queen's Black Tech</p>
-
-<p>Sep 2025 – Present</p>
-
-</div>
-
-
-<div class="project-subsection">
-
-<h3>Web Developer</h3>
-
-<p>Web Development Club</p>
-
-<p>Sep 2024 – Apr 2025</p>
-
-</div>
-
-
-<div class="project-subsection">
-
-<h3>Teaching Assistant – Intro to Computing</h3>
-
-<p>Sep 2023 – Apr 2024</p>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contacts</h2>
-
-<div class="contact-links">
-
-<a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-<i class="bi bi-linkedin"></i>
-</a>
-
-<a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-<i class="bi bi-envelope"></i>
-</a>
-
-<a href="https://github.com/chukaufo" target="_blank" class="contact-item">
-<i class="bi bi-github"></i>
-</a>
-
-</div>
-
-</section>
+  <script src="script.js"></script>
+</body>
+</html>

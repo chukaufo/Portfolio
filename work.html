@@ -1,118 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuka's Portfolio | Work</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuka | Work</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Chuka</a>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li class="dropdown">
-                <a href="work.html" class="active">Work</a>
-                <ul class="dropdown-menu">
-                    <li><a href="work.html#projects">Projects</a></li>
-                    <li><a href="work.html#skills">Skills</a></li>
-                </ul>
-            </li>
-            <li><a href="resume.html" target="_blank">Resume</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            <i class="bi bi-house-door"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="dropdown">
+          <button class="dropdown-toggle active" type="button">
+            <span class="nav-link-inner">
+              <i class="bi bi-code-slash"></i>
+              <span>Software Projects</span>
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="experience.html">
+            <i class="bi bi-briefcase"></i>
+            <span>Experience</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a href="resume.html" target="_blank">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>Resume</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <p class="scroll-message">Projects and Skills</p>
-</header>
+  </header>
 
-<div class="stars"></div>
+  <main class="page-content">
+    <section id="projects" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Work</p>
+        <h1>Projects</h1>
+      </div>
 
-<main class="page-container">
-    <div class="page-content">
-        <section id="projects">
-            <h1>Projects</h1>
-            <div class="card-grid">
-                <div class="info-card">
-                    <h3>Personal Finance Manager</h3>
-                    <p>A finance tracking application built to help users manage expenses, budgets, and savings goals through a clean and practical interface.</p>
-                </div>
+     <div class="project-grid">
+  <article class="project-card">
+    <details class="project-details">
+      <summary class="project-summary">
+        <img src="images/SpendSight.png" alt="Spend Sight App Screenshot." class="project-image">
+        <div class="project-preview-text">
+          <h2>Spend Sight</h2>
+          <h3>iOS Finance App</h3>
+          <p>Receipt scanning and spending insights iOS app.</p>
+        </div>
+        <div class="project-links">
+          <a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">
+            <i class="bi bi-box-arrow-up-right"></i> View Project Website</a>
+          <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank">
+            <i class="bi bi-github"></i> GitHub</a>
+        </div>
+        <p class="expand-hint">Click card to read more</p>
+      </summary>
 
-                <div class="info-card">
-                    <h3>Flight Booking System</h3>
-                    <p>A flight search web application that helps users find low-cost flight options in a clear and user-friendly format.</p>
-                </div>
-
-                <div class="info-card">
-                    <h3>Currency Converter</h3>
-                    <p>A conversion tool designed to provide quick and simple currency exchange calculations through an intuitive interface.</p>
-                </div>
+      <div class="project-expanded">
+        <p>
+          Spend Sight is an iOS app that helps users turn paper receipts into clear spending insights.
+          Users can take a photo of a receipt or upload one from their phone, and the app automatically
+          reads the receipt and extracts important details like the store name, total amount spent, and date.
+          After scanning, users can choose a spending category and save the receipt. The app then tracks
+          daily and weekly spending through simple visual graphs, helping users understand where their money
+          is going and build better financial habits.
+        </p>
+        <div class="subheading">Tech Stack Used:</div>
+        <div class="item-box">
+                <div class="item">Swift</div>
+                <div class="item">SwiftUI</div>
+                <div class="item">Core Data</div>
+                <div class="item">Apple Vision (OCR)</div>
+                <div class="item">Swift Charts</div>
             </div>
-        </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="subsection">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Swift</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>C/C++</li>
-                    </ul>
-                </div>
+      </div>
+    </details>
+  </article>
 
-                <div class="subsection">
-                    <h3>Tools & Frameworks</h3>
-                    <ul>
-                        <li>Flask</li>
-                        <li>Xcode</li>
-                        <li>Django</li>
-                        <li>Firebase</li>
-                        <li>Qt</li>
-                        <li>Figma</li>
-                        <li>Selenium</li>
-                    </ul>
-                </div>
+  <article class="project-card">
+    <details class="project-details">
+      <summary class="project-summary">
+        <img src="images/cheapticket.png" alt="Cheap Flight Ticket Finder App Screenshot." class="project-image">
+        <div class="project-preview-text">
+          <h2>Cheap Flight Ticket Finder</h2>
+          <h3>Full-Stack Web App</h3>
+          <p>Full-stack flight search app with cheap-first results.</p>
+        </div>
+         <div class="project-links">
+          <a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">
+            <i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+          <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank">
+            <i class="bi bi-github"></i> GitHub</a>
+        </div>
+        <p class="expand-hint">Click card to read more</p>
+      </summary>
 
-                <div class="subsection">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>UI/UX Design</li>
-                        <li>Software Testing</li>
-                        <li>SEO</li>
-                    </ul>
-                </div>
+      <div class="project-expanded">
+        <p>
+          Cheap Flight Finder is a full-stack web application that allows users to search for flight options
+          between airports around the world. Users can select an origin airport, destination airport, and
+          departure date to view available flight offers. The application retrieves flight data using the
+          Amadeus Flight Offers API and displays results including the airline, price, departure and arrival
+          airports, and flight times. Results are automatically shown starting from the cheapest flights,
+          helping users quickly compare affordable options. To improve usability, the search fields include
+          an airport autocomplete feature that allows users to search by city, airport name, country, or
+          IATA code. The backend server securely handles API requests and processes the results before sending
+          them to the frontend for display. <b>Note: This project uses the Amadeus Sandbox API, so the flights
+          displayed do not reflect real-time airline availability.</b>
+        </p>
+        
+        
+         </div>
+         <div class="subheading">Tech Stack Used:</div>
+         <div class="item-box">
+                <div class="item">Node.js</div>
+                <div class="item">Express.js</div>
+                <div class="item">Vanilla Javascript</div>
+                <div class="item">HTML</div>
+                <div class="item">CSS</div>
             </div>
-        </section>
 
-        <section class="contact-section">
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                </a>
-                <a href="https://github.com/chukauwefoh" target="_blank" class="contact-item">
+    </details>
+  </article>
+
+  <article class="project-card">
+    <details class="project-details">
+      <summary class="project-summary">
+        <img src="images/onlineconverter.png" alt="Online Converter Screenshot" class="project-image">
+        <div class="project-preview-text">
+          <h2>Online Currency Converter</h2>
+          <h3>Java Desktop App & JavaScript Web App</h3>
+          <p>Responsive currency converter built from a Java app into a web app.</p>
+        </div>
+        <div class="project-links">
+
+  <a href="https://uf0-tech.github.io/online-currency-converter/" target="_blank">
+    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+  </a>
+
+  <a href="https://github.com/chukaufo/Currency-Converter" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+
+  <a href="https://github.com/UF0-Tech/online-currency-converter" target="_blank">
+    <i class="bi bi-github"></i> JS GitHub
+  </a>
+
+</div>
+        <p class="expand-hint">Click card to read more</p>
+      </summary>
+
+      <div class="project-expanded">
+        <p>
+          I developed a currency converter that began as a Java desktop application using live exchange rates
+          updated every 24 hours. To enhance accessibility and usability, I later transformed it into a responsive
+          JavaScript web app, enabling users to access it directly through their browsers. This project sharpened
+          my skills in API integration, data formatting, and cross-platform development.
+        </p>
+
+        <div class="subheading">Tech Stack Used:</div>
+
+<div class="item-box">
+    <div class="item">Java</div>
+    <div class="item">JavaFX</div>
+    <div class="item">HTML</div>
+    <div class="item">CSS</div>
+    <div class="item">JavaScript</div>
+    <div class="item">API Integration</div>
+</div>
+       
+     
+        
+      </div>
+    </details>
+  </article>
+</div>
+    </section>
+
+    <section id="skills" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Tech Stack</p>
+        <h1>Skills</h1>
+      </div>
+
+      <div class="skills-groups">
+        <div class="skill-box">
+          <h2>Languages</h2>
+          <p>Python, Java, JavaScript, Swift, HTML, CSS, C/C++</p>
+        </div>
+
+        <div class="skill-box">
+          <h2>Frameworks</h2>
+          <p>React, React Native, Node.js, Flask, Qt</p>
+        </div>
+
+        <div class="skill-box">
+          <h2>Databases</h2>
+          <p> MySQL, Firebase, Core Data, Supabase</p>
+        </div>
+        <div class="skill-box">
+          <h2>Tools</h2>
+          <p>Git, Xcode, Figma, Bash</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+                
+               <h2>Contacts</h2>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
+                        <i class="bi bi-linkedin linkedin-icon"></i>
+                    </a>
+                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
+                        <i class="bi bi-envelope email-icon"></i>
+                    </a>
+                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
                     <i class="bi bi-github"></i>
-                </a>
-            </div>
-        </section>
+                    </a>
+                </div>
 
-        <footer>
+                
+            </section>
+  </main>
+   <footer>
             <p>&copy; 2026 Chuka.</p>
         </footer>
-    </div>
-</main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
