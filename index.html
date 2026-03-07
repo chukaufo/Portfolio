@@ -3,698 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuka's Portfolio</title>
+    <title>Chuka's Portfolio | About</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            min-height: 100vh; 
-            width: 100%; 
-            max-width: 100vw;  /* Prevent horizontal scroll */
-            margin: 0 auto;
-            background: whitesmoke;
-            color: black;
-            overflow-x: hidden;  /* Prevent horizontal scrolling */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 10px;
-            line-height: 2em;
-        }
-
-        
-        /* Header Styling */
-        header {
-            width: 100%;
-            padding: 15px 5%;  /* Original padding */
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: black; 
-            z-index: 100;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            color: whitesmoke;
-
-           
-        }
-
-        .in-progress {
-            font-size: 18px;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            width: 100%;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-            flex-shrink: 0; 
-        }
-
-        nav ul li a {
-            color: whitesmoke;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px;
-            display: inline-block;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #00bcd4;
-        }
-
-        
-
-        /* Stars Background */
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: whitesmoke;
-            border-radius: 50%;
-            animation: twinkle 2s infinite ease-in-out;
-        }
-
-        .star::before {
-            content: "+"; /* Display a dollar sign */
-            font-family: 'Arial', sans-serif; /* Set a readable font for the dollar sign */
-            font-size: 10px;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-
-        .scroll-container {
-            width: 100%; /* Full width of the viewport */
-            max-width: 600px; /* Set a narrower max-width for the container */
-            margin: 180px auto; /* Center the container */
-            padding-top: 50px; /* Adjust this value as needed */
-            padding-bottom: 50px; /* Adjust this value as needed */
-            overflow-x: hidden; /* Prevents horizontal scroll */
-        }
-
-        .scroll-text {
-            font-size: 2em;
-            text-align: center; 
-            line-height: 2.5em; 
-            
-            width: 100%; /* Full width for the text */
-        }
-
-        
-
-        
-        h1, h2, h3 {
-            width: 100%;
-            text-align: center;   /* Default Centering */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            display: block;
-            margin: 20px 0;   /* Avoid conflicting margins */
-        }
-
-       
-
-        p, li, label, button{
-            letter-spacing: 2px;
-            margin-bottom: 23px;
-        }
-
-        main, footer {
-            text-align: center;
-        }
-
-        section {
-            
-            width: 90%;
-            max-width: 1200px;
-            padding-top: 80px; 
-            scroll-margin-top: 200px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto 200px auto;  /* Center and add space */
-            text-align: center;
-            border-radius: 12px; /* Soft rounded corners */
-            box-shadow: grey;
-                }
-
-    
-
-        form {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        button {
-            background: #00bcd4;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #0097a7;
-        }
-
-        #content {
-            transition: opacity 0.3s ease-in-out;
-            width: 100%;
-            max-width: 600px;
-            padding: 0 5%; /* Prevent content sticking to edges */
-            margin: 180px auto 0 auto; /* Add space under header */
-            text-align: center;
-        }
-
-        #content, .scroll-container, section {
-            width: 100%;
-            max-width: 1200px;
-            text-align: center;    /* Center everything inside */
-        }
-
-      .image-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-      .image-container img {
-        width: 60%; /* Set desired width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Keep your desired border radius */
-        outline: 5px solid black; /* Keep your desired outline */
-        
-        /* Resetting default styles */
-        display: block; /* Ensures the image behaves like a block element */
-        margin: 0 auto; /* Centers the image within the container */
-        padding: 0; /* Reset padding */
-        border: none; /* Reset any default border */
-        max-width: 100%; /* Ensures the image doesn't exceed the container width */
-        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    }
-
-        .caption {
-            font-size: 18px;
-            font-style: italic;
-            color: #555;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-                /* Reset All Link Styles */
-        .contact-item, .contact-item:focus, .contact-item:active, .contact-item:visited {
-            all: unset;              /* Reset Everything */
-            display: inline-block;   /* Ensure Correct Link Display */
-            cursor: pointer;         
-            margin: 0 20px;          /* Increase Spacing Between Icons */
-        }
-        
-        /* Icon Styling */
-        .contact-item i {
-            font-size: 4rem;               /* Icon Size */
-            font-family: "Bootstrap Icons"; 
-            transition: color 0.3s ease; 
-            width: 4.5rem;                 /* Square Icon Width */
-            height: 4.5rem;                /* Square Icon Height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid black;      /* Add Border for Even Shape */
-            border-radius: 10%;            /* Rounded Corners */
-        }
-        
-        /* Hover Effect */
-        .contact-item:hover i {
-            color: purple;                 /* Change Icon Color on Hover */
-        }
-        
-        /* Adjust Space from Heading */
-        .contact-links {
-            margin-top: 10px;              /* Reduced Space from Heading */
-        }
-
-
-        #contact {
-            margin-top: 40px;
-        }
-
-        
-
-          #skills { 
-                width: fit-content;
-                margin: 0 auto; /* Center the container */
-                padding: 80px 0; /* Add padding to the top and bottom */
-                             
-            }
-
-            #skills h2 {
-                margin-bottom: 20px; /* Adjust spacing between the heading and the flashcards */
-                font-size: 2rem; /* Optional: adjust font size for the heading */
-                font-weight: bold; /* Optional: make the heading bold */
-                        }
-
-            .subsections-container {
-                display: flex; /* Use flexbox to arrange subsections in a row */
-                justify-content: center; /* Center the subsections horizontally */
-                flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
-                gap: 20px; /* Space between subsections */
-            }
-
-            
-
-            /* Style individual flashcards */
-            .subsection { 
-                background: whitesmoke;
-                padding: 30px;
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                flex: 1 1 300px; /* Grow and shrink with a minimum width of 300px */
-                text-align: center;
-                position: relative;
-                z-index: 1; /* Ensures proper stacking */
-                min-width: 250px; /* Prevents squishing */
-                max-width: 350px; /* Keeps a readable size */
-            }
-
-            /* Hover effect: enlarge and bring to front */
-            .subsection:hover {
-                background: white;
-                transform: scale(1.1); /* Slight zoom effect */
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-                z-index: 10; /* Bring the hovered card forward */
-            }
-
-            /* Ensure lists look clean */
-            .subsection ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            .subsection li {
-                padding: 5px 0;
-                font-size: 16px;
-            }
-
-            .project-subsection img {
-                max-width: 100%; /* Ensure the image is responsive and fits within the subsection */
-                height: auto; /* Maintain the aspect ratio */
-                border-radius: 8px; /* Optional: add rounded corners to the images */
-                margin: 10px 0; /* Add some space above and below the image */
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
-            }
-
-            .item-box {
-            align-items: center;
-            display: flex;              /* Arrange items side by side */
-            flex-wrap: wrap;            /* Ensure items wrap to next line if needed */
-            padding: 10px 0;            /* Top and bottom padding only */
-            background-color: transparent; /* Transparent background */
-            color: black;              /* Text color */
-            box-sizing: border-box;     /* Include padding in width/height */
-            width: 100%;                /* Stretch across the section */
-            position: relative;         /* Reference for absolute positioning */
-            font-size: 15px;
-            }
-
-        .item {
-            padding: 10px 15px; /* Padding for each item */
-            margin: 0 5px; /* Margin between items */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            transition: background-color 0.3s, color 0.3s; /* Transition effects */
-        }
-
-        .item:hover, .item:active {
-            background-color: whitesmoke; /* Yellow background on hover */
-            color: black; /* Change text color to black on hover */
-        }
-
-        github-icon {
-            width: 3rem;         /* Reduced width */
-            height: 3rem;        /* Reduced height */
-            fill: black; 
-            color: gray;       /* Default color */
-            transition: fill 0.3s ease;
-            border-radius: 10%;  /* Rounded corners */
-
-        }
-
-        .subheading{
-            font-size: 18px; /* Adjust the font size as needed */
-            font-weight: bold; /* Make the text bold */
-            margin-top: 10px;
-            margin-bottom: 20px; /* Space between the subheading and the items */
-            text-align: left; 
-            border-top: 2px solid black;  /* Top border only */
-        }
-
-
-        .link-item:hover .github-icon {
-            fill: blue;  /* Change color on hover */
-        }
-
-        #projects {
-           
-           display: flex; /* Use flexbox for centering */
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            width: 100%; /* Ensure the container takes full width */
-            max-width: 600px; /* Optional: Set a max width for the container */
-            margin: 0 auto; /* Center the container */
-            padding: 80px 0; /* Add padding to the top and bottom */
-            font-size: 14px;
-        }
-
-        .pro-subsections-container {
-            display: block; /* Use block layout to stack subsections */
-            align-items: center; /* Center items if needed */
-        }
-
-        .project-subsection {
-            background: whitesmoke; /* Background color for subsections */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer; /* Change cursor to pointer */
-            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
-            width: 100%; /* Full width for stacked subsections */
-            max-width: 600px; /* Maximum width for larger screens */
-            margin: 10px 0; /* Add vertical margin for spacing between subsections */
-        }
-
-        /* Hover effect specifically for project subsections */
-        .project-subsection:hover {
-            background: white; /* Change background color on hover */
-            transform: scale(1.02); /* Slightly enlarge on hover */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
-            z-index: 30; /* Bring the hovered card forward */
-        }
-
-        
-                
-
-            
-    </style>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-   
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <li><a href="index.html" class="active">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li class="dropdown">
+                <a href="work.html">Work</a>
+                <ul class="dropdown-menu">
+                    <li><a href="work.html#projects">Projects</a></li>
+                    <li><a href="work.html#skills">Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="resume.html" target="_blank">Resume</a></li>
         </ul>
     </nav>
-    <p class="scroll-message">Please Scroll</p>
+    <p class="scroll-message">Welcome to My Portfolio</p>
 </header>
 
 <div class="stars"></div>
-<script>
-    const starContainer = document.querySelector('.stars');
-    function createStar() {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
-        starContainer.appendChild(star);
-    }
-    for (let i = 0; i < 150; i++) createStar();
 
+<main class="page-container">
+    <div class="page-content">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hi, I'm Chuka, a software developer currently studying computing at Queen’s University.</p>
+            <p>I enjoy building software that blends clean design with practical functionality. I’m especially interested in creating digital experiences that are useful, visually appealing, and easy to use.</p>
+            <p>My background includes software development, interface design, and building projects that solve real problems while still feeling polished and modern.</p>
+        </section>
 
-
-
-
-
-</script>
-<div id="content">
-<div class="scroll-container">
-    <div class="scroll-text">
-        <main>
-            <section id="about">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Hi, I'm Chuka, an aspiring software developer currently pursuing my bachelor's degree in computing at Queen's University.</p>
-                <p>I am passionate about creating software that makes life easier by blending creativity with technical skills to design tools that are both functional and visually appealing.</p>
-
-                <div class="image-container">
-                    <img src="images/me.jpg" alt="Picture of me by the lake">
-            </div>
-                
-            </section>
-
-           
-             <section id="projects">
-                <h2>Projects</h2>
-                <div class="pro-subsections-container">
-                
-                
-                <div class="project-subsection" >
-                    <h2>Online Currency Converter</h2>
-                    <img src="images/onlineconverter.png" alt="Online Currency Converter" class="outlined-image">
-
-                    <p>I developed a currency converter that began as a Java desktop application using live exchange rates updated every 24 hours. To enhance accessibility and usability, I later transformed it into a responsive JavaScript web app, enabling users to access it directly through their browsers. This project sharpened my skills in API integration, data formatting, and cross-platform development. </p>
-                    
-                   <p> <a href="https://uf0-tech.github.io/online-currency-converter/" target="_blank">Visit the Online Currency Converter</a>
-                    </p>
-                    
-                    <div class="subheading">Skills used:</div>
-                    <div class="item-box">
-                        <div class="item">Java</div>
-                        <div class="item">JavaFx</div>
-                        <div class="item">HTML</div>
-                        <div class="item">CSS</div>
-                        <div class="item">API</div>
-                        <div class="item">JavaScript</div>
-                        
-                    </div>
-
-                        <div class="link-container">
-                            <a href="https://github.com/chukaufo/Currency-Converter" target="_blank" class="link-item">
-                        <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16" fill="dimgray">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.22 2.2.82a7.62 7.62 0 012.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.003 8.003 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                    </a>
-                            <a href="https://github.com/UF0-Tech/online-currency-converter" class="link-item" target="_blank">
-                            <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16" fill="dimgrey">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.22 2.2.82a7.62 7.62 0 012.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.003 8.003 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                            </a>
-                        </div>
-                   
-                </div>
-                
-           <div class="project-subsection">
-            <h2>Spend Sight</h2>
-            <div>
-                <img src="images/SpendSight.png" alt="Spend Sight App Screenshot." class="outlined-image">
-            </div>
-        
-            <p>
-                Spend Sight is an iOS app that helps users turn paper receipts into clear spending insights. 
-                Users can take a photo of a receipt or upload one from their phone, and the app automatically 
-                reads the receipt and extracts important details like the store name, total amount spent, and date. 
-                After scanning, users can choose a spending category and save the receipt. 
-                The app then tracks daily and weekly spending through simple visual graphs, 
-                helping users understand where their money is going and build better financial habits.
-            </p>
-        
-            <a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">
-                Visit the project website
-            </a>
-        
-            <div class="subheading">Skills used:</div>
-            <div class="item-box">
-                <div class="item">Swift</div>
-                <div class="item">SwiftUI</div>
-                <div class="item">Core Data</div>
-                <div class="item">Apple Vision (OCR)</div>
-                <div class="item">Swift Charts</div>
-            </div>
-
-                <div class="link-container">
-                            <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank" class="link-item">
-                        <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16" fill="dimgray">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.22 2.2.82a7.62 7.62 0 012.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.003 8.003 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                    </a>
-                </div>
-        </div>
-
-
-                     <div class="project-subsection">
-            <h2>Cheap Flight Ticket Finder</h2>
-            <div>
-                <img src="images/cheapticket.png" alt="Spend Sight App Screenshot." class="outlined-image">
-            </div>
-        
-            <p>
-                Cheap Flight Finder is a full-stack web application that allows users to search for flight options between airports around the world. Users can select an origin airport, destination airport, and departure date to view available flight offers.
-The application retrieves flight data using the Amadeus Flight Offers API and displays results including the airline, price, departure and arrival airports, and flight times. Results are automatically shown starting from the cheapest flights, helping users quickly compare affordable options.
-To improve usability, the search fields include an airport autocomplete feature that allows users to search by city, airport name, country, or IATA code.
-The backend server securely handles API requests and processes the results before sending them to the frontend for display.
-<b>Note: This project uses the Amadeus Sandbox API, so the flights displayed do not reflect real-time airline availability.</b>
-            </p>
-        
-            <a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">
-                Visit Cheap Flight Finder
-            </a>
-        
-            <div class="subheading">Skills used:</div>
-            <div class="item-box">
-                <div class="item">Node.js</div>
-                <div class="item">Express.js</div>
-                <div class="item">Vanilla Javascript</div>
-                <div class="item">HTML</div>
-                <div class="item">CSS</div>
-            </div>
-
-                <div class="link-container">
-                            <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank" class="link-item">
-                        <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16" fill="dimgray">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.22 2.2.82a7.62 7.62 0 012.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.003 8.003 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                    </a>
-                </div>
-        </div>
-           
-
-                
-                
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                 <div class="subsections-container">
-                <div class="subsection">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Swift</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>C/C++</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3>Tools & Frameworks</h3>
-                    <ul>
-                        <li>Flask</li>
-                        <li>React</li>
-                        <li>Firebase</li>
-                        <li>Node.js</li>
-                        <li>Xcode</li>
-                        <li>Django</li>
-                        <li>MySql</li>
-                        <li>Qt</li>
-                        <li>Figma</li>
-                        <li>Selenium</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>SEO</li>
-                        <li>UI/UX Design</li>
-                        <li>Software Testing</li>
-                    </ul>
-                </div>
-              </div>
-            </section>
-
-
-            <section id="hobbies">
+        <section id="hobbies">
             <h2>Hobbies</h2>
-            <p>Staying active, creative, and inspired defines me. I hit the gym regularly to challenge my mental and physical limits. 
-                Fashion is another way I express myself—I enjoy putting together new outfits that reflect my style and creativity. 
-                Music keeps me motivated, with Bob Marley, Rema, and Skepta topping my playlist. I also enjoy making beats on FL Studio 
-                in my free time. As a huge soccer fan and devoted Arsenal supporter, I play as a left-back or center-back whenever 
-                I hit the field.</p>
-            
-            
-            </section>
+            <p>Outside of tech, I enjoy staying active, being creative, and expressing myself through different interests.</p>
+            <p>I hit the gym regularly, I’m into fashion and styling outfits, and I also enjoy making beats on FL Studio in my free time.</p>
+            <p>I’m a huge Arsenal supporter, and I enjoy playing soccer as a left-back or center-back whenever I get the chance.</p>
+        </section>
 
-            
+        <section id="me">
+            <div class="image-container">
+                <img src="images/me.jpg" alt="Picture of me by the lake">
+            </div>
+        </section>
 
-            
-            <section id="contact">
-                
-               <h2>Contacts</h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                        <i class="bi bi-linkedin linkedin-icon"></i>
-                    </a>
-                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                        <i class="bi bi-envelope email-icon"></i>
-                    </a>
-                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
+        <section class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                </a>
+                <a href="https://github.com/chukauwefoh" target="_blank" class="contact-item">
                     <i class="bi bi-github"></i>
-                    </a>
-                </div>
-
-                
-            </section>
-        </main>
+                </a>
+            </div>
+        </section>
 
         <footer>
             <p>&copy; 2026 Chuka.</p>
         </footer>
     </div>
-</div>
-</div>
+</main>
 
+<script src="script.js"></script>
 </body>
 </html>
