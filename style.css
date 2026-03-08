@@ -528,7 +528,7 @@ footer p {
         align-items: center;
         gap: 0.5rem;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
@@ -542,6 +542,18 @@ footer p {
     .nav-links a,
     .dropdown-toggle {
         flex: 0 0 auto;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+        min-width: 180px;
+        z-index: 2000;
     }
 
     .hero {
