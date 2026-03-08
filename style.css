@@ -525,7 +525,7 @@ footer p {
         flex: 1;
         display: flex;
         flex-wrap: nowrap;
-        align-items: center;
+        align-items: flex-start;
         gap: 0.5rem;
         overflow-x: auto;
         overflow-y: visible;
@@ -538,7 +538,10 @@ footer p {
         display: none;
     }
 
-    .nav-links li,
+    .nav-links li {
+        flex: 0 0 auto;
+    }
+
     .nav-links a,
     .dropdown-toggle {
         flex: 0 0 auto;
@@ -549,11 +552,15 @@ footer p {
     }
 
     .dropdown-menu {
-        position: absolute;
-        top: calc(100% + 0.5rem);
-        left: 0;
-        min-width: 180px;
-        z-index: 2000;
+        position: static;
+        display: none;
+        margin-top: 0.5rem;
+        min-width: 160px;
+        width: max-content;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
     }
 
     .hero {
