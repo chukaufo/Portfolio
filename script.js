@@ -4,7 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdowns.forEach((dropdown) => {
     const toggle = dropdown.querySelector(".dropdown-toggle");
 
-    toggle.addEventListener("click", () => {
+    if (!toggle) return;
+
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      dropdowns.forEach((otherDropdown) => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.classList.remove("open");
+        }
+      });
+
       dropdown.classList.toggle("open");
     });
   });

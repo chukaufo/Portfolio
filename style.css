@@ -96,10 +96,16 @@ a {
 }
 
 .nav-links {
-    list-style: none;
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
 .nav-links li {
@@ -538,16 +544,17 @@ footer p {
         display: none;
     }
 
-    .nav-links li {
-        flex: 0 0 auto;
-    }
-
+    .nav-links li,
     .nav-links a,
     .dropdown-toggle {
         flex: 0 0 auto;
     }
 
     .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 0 auto;
         position: relative;
     }
 
@@ -573,6 +580,7 @@ footer p {
         max-width: 300px;
     }
 }
+
 
 @media (max-width: 560px) {
     .nav-links a,
