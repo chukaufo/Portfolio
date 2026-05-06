@@ -781,3 +781,13 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+.featured-project {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .featured-project {
+    grid-column: auto;
+  }
+}
