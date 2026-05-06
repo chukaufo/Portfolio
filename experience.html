@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chuka | Experience</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
   <header class="site-header">
     <nav class="navbar">
       <a href="index.html" class="logo">Chuka</a>
-
       <ul class="nav-links">
         <li>
           <a href="index.html">
@@ -23,31 +21,25 @@
             <span>Home</span>
           </a>
         </li>
-
         <li class="dropdown">
           <button class="dropdown-toggle" type="button">
             <span class="nav-link-inner">
               <i class="bi bi-code-slash"></i>
-              <span>Software Projects</span>
+              <span>Work</span>
               <i class="bi bi-chevron-down"></i>
             </span>
           </button>
-
           <ul class="dropdown-menu">
             <li><a href="work.html#projects">Projects</a></li>
             <li><a href="work.html#skills">Skills</a></li>
           </ul>
         </li>
-
         <li>
           <a href="experience.html" class="active">
             <i class="bi bi-briefcase"></i>
             <span>Experience</span>
           </a>
         </li>
-
-     
-
         <li>
           <a href="resume.html" target="_blank">
             <i class="bi bi-file-earmark-text"></i>
@@ -66,48 +58,70 @@
       </div>
 
       <div class="experience-list">
+        <!-- Revved Up Capstone Project -->
+        <article class="experience-card featured-card">
+          <h2>Revved Up (Full-Stack Capstone Project)</h2>
+          <p class="meta">Queen's Kinesiology • Sep 2025 – Apr 2026</p>
+          <p class="experience-description">
+            Architected and implemented a production fitness management platform serving 70+ participants in Queen's Kinesiology's accessible fitness program. Designed a layered TypeScript/Node.js backend with role-based access control, configured Azure production infrastructure with reverse proxy and SSL encryption, and integrated email automation. Deployed to official queensu.ca domain with comprehensive documentation for long-term maintenance.
+          </p>
+          <div class="experience-highlights">
+            <span class="highlight-tag">Architecture</span>
+            <span class="highlight-tag">Full-Stack</span>
+            <span class="highlight-tag">Production</span>
+            <span class="highlight-tag">70+ Users</span>
+          </div>
+        </article>
+
+        <!-- Lead Software Developer -->
         <article class="experience-card">
           <h2>Lead Software Developer</h2>
-          <p class="meta">Queen’s Black Tech • Sep 2025 – Present</p>
+          <p class="meta">Queen's Black Tech • Sep 2025 – May 2026</p>
+          <p class="experience-description">
+            Led React/TypeScript frontend development for student organization website, designing and implementing core features (navbar, contact form, events page, teams page). Mentored 2 interns with no prior coding experience on Git workflows and React best practices, enabling them to implement the footer component and contribute to the production codebase.
+          </p>
         </article>
 
+        <!-- Digital Classroom Support Staff -->
         <article class="experience-card">
           <h2>Digital Classroom Support Staff</h2>
-          <p class="meta">Queen’s University • Sep 2025 – Present</p>
+          <p class="meta">Queen's IT Services • Sep 2025 – Apr 2026</p>
+          <p class="experience-description">
+            Resolved audio/visual and technical issues across 130+ classroom spaces to maintain classroom technology and ensure instructor productivity. Responded to live support calls during lectures to restore critical classroom technology, enabling classes to proceed as scheduled.
+          </p>
         </article>
 
+        <!-- Teaching Assistant -->
         <article class="experience-card">
-          <h2>Web Developer</h2>
-          <p class="meta">QWeb Development Club • Sep 2024 – Apr 2025</p>
-        </article>
-
-        <article class="experience-card">
-          <h2>Teaching Assistant, Intro to Computing</h2>
-          <p class="meta">Queen’s University • Sep 2023 – Apr 2024</p>
+          <h2>Teaching Assistant, CISC101 (Intro to Programming)</h2>
+          <p class="meta">Queen's University • Sep 2023 – Apr 2024</p>
+          <p class="experience-description">
+            Delivered Python workshops to 200+ students, creating clear explanations of core programming concepts (loops, functions, data structures) that enabled 50+ struggling learners to grasp fundamentals and successfully complete the course. Conducted personalized 1-on-1 tutoring sessions identifying misconceptions in code logic and debugging approaches.
+          </p>
         </article>
       </div>
     </section>
-    <section id="contact">
-                
-               <h2>Contacts</h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                        <i class="bi bi-linkedin linkedin-icon"></i>
-                    </a>
-                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                        <i class="bi bi-envelope email-icon"></i>
-                    </a>
-                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
-                    <i class="bi bi-github"></i>
-                    </a>
-                </div>
 
-                
-            </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:chukauwefoh2@gmail.com" class="contact-item" title="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://github.com/chukaufo" target="_blank" class="contact-item" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </section>
   </main>
-   <footer>
-            <p>&copy; 2026 Chuka.</p>
-        </footer>
+
+  <footer>
+    <p>&copy; 2026 Chuka. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
