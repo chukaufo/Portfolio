@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chuka | Home</title>
-
+  <title>Chuka | Software Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
   <header class="site-header">
     <nav class="navbar">
       <a href="index.html" class="logo">Chuka</a>
-
       <ul class="nav-links">
         <li>
           <a href="index.html" class="active">
@@ -23,31 +21,25 @@
             <span>Home</span>
           </a>
         </li>
-
         <li class="dropdown">
           <button class="dropdown-toggle" type="button">
             <span class="nav-link-inner">
               <i class="bi bi-code-slash"></i>
-              <span>Software Projects</span>
+              <span>Work</span>
               <i class="bi bi-chevron-down"></i>
             </span>
           </button>
-
           <ul class="dropdown-menu">
             <li><a href="work.html#projects">Projects</a></li>
             <li><a href="work.html#skills">Skills</a></li>
           </ul>
         </li>
-
         <li>
           <a href="experience.html">
             <i class="bi bi-briefcase"></i>
             <span>Experience</span>
           </a>
         </li>
-
-    
-
         <li>
           <a href="resume.html" target="_blank">
             <i class="bi bi-file-earmark-text"></i>
@@ -59,43 +51,121 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
       <p class="eyebrow">Software Developer</p>
-      <h1>Hi, I’m Chuka.</h1>
+      <h1>Hi, I'm Chuka.</h1>
       <p class="hero-text">
-        I build clean, practical, and visually strong software projects.
+        I architect and build production systems that solve real problems. Specialized in full-stack development, iOS apps, and scalable backend systems.
       </p>
-
       <img src="images/chukapro.JPG" alt="Picture of me" class="hero-image">
-
       <div class="hero-actions">
-        <a href="work.html#projects" class="btn btn-primary">View Work</a>
+        <a href="work.html#projects" class="btn btn-primary">View Projects</a>
+        <a href="#about" class="btn btn-secondary">Learn More</a>
         <a href="resume.html" target="_blank" class="btn btn-secondary">Resume</a>
-        <a href="#contact" target="_blank" class="btn btn-secondary">Contact</a>
       </div>
     </section>
 
-    <section id="contact">
-                
-               <h2>Contacts</h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                        <i class="bi bi-linkedin linkedin-icon"></i>
-                    </a>
-                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                        <i class="bi bi-envelope email-icon"></i>
-                    </a>
-                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
-                    <i class="bi bi-github"></i>
-                    </a>
-                </div>
+    <!-- About / Bio Section -->
+    <section id="about" class="bio-section">
+      <div class="bio-container">
+        <h2>About Me</h2>
+        <div class="bio-content">
+          <p>
+            I'm a <strong>Software Design graduate</strong> from Queen's University with production experience building full-stack systems and native iOS applications. I specialize in architecting scalable backends, implementing role-based access control, and deploying secure infrastructure.
+          </p>
+          <p>
+            Most recently, I <strong>architected and implemented the Revved Up backend</strong>—a production fitness management platform serving 70+ users. The project involved designing a layered architecture with TypeScript/Node.js, implementing role-based access control for multiple user types, configuring Azure production infrastructure, and integrating email automation. This experience taught me the importance of clean architecture, security-first design, and building systems that solve real-world problems.
+          </p>
+          <p>
+            I'm passionate about writing clean, maintainable code and mentoring other developers. I enjoy working across the full stack—from designing scalable backend systems to building responsive frontends and native mobile apps. When I'm not coding, I'm exploring new technologies and contributing to open-source projects.
+          </p>
+          <p>
+            I'm currently looking for <strong>entry-level software engineering roles</strong> where I can continue building production systems and grow alongside experienced engineers. Whether it's backend architecture, iOS development, or full-stack work—I'm ready to contribute.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                
-            </section>
+    <!-- Tech Stack Preview -->
+    <section class="tech-preview">
+      <div class="bio-container">
+        <h2>Technologies I Work With</h2>
+        <div class="tech-grid">
+          <div class="tech-category">
+            <h3>Languages</h3>
+            <div class="item-box">
+              <span class="item">Python</span>
+              <span class="item">Swift</span>
+              <span class="item">TypeScript</span>
+              <span class="item">JavaScript</span>
+              <span class="item">Java</span>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h3>Frontend & Mobile</h3>
+            <div class="item-box">
+              <span class="item">React</span>
+              <span class="item">SwiftUI</span>
+              <span class="item">React Native</span>
+              <span class="item">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h3>Backend & Infrastructure</h3>
+            <div class="item-box">
+              <span class="item">Node.js</span>
+              <span class="item">Express</span>
+              <span class="item">TypeScript</span>
+              <span class="item">Azure</span>
+              <span class="item">SQLite</span>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h3>Tools & Platforms</h3>
+            <div class="item-box">
+              <span class="item">Git/GitHub</span>
+              <span class="item">Xcode</span>
+              <span class="item">Docker</span>
+              <span class="item">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="bio-container">
+        <h2>Let's Work Together</h2>
+        <p>I'm always interested in discussing new projects, opportunities, and tech. Feel free to reach out.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="work.html#projects" class="btn btn-secondary">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:chukauwefoh2@gmail.com" class="contact-item" title="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://github.com/chukaufo" target="_blank" class="contact-item" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </section>
   </main>
-   <footer>
-            <p>&copy; 2026 Chuka.</p>
-        </footer>
+
+  <footer>
+    <p>&copy; 2026 Chuka. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
