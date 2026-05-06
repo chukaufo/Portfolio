@@ -28,7 +28,7 @@
           <button class="dropdown-toggle active" type="button">
             <span class="nav-link-inner">
               <i class="bi bi-code-slash"></i>
-              <span>Software Projects</span>
+              <span>Work</span>
               <i class="bi bi-chevron-down"></i>
             </span>
           </button>
@@ -45,7 +45,6 @@
             <span>Experience</span>
           </a>
         </li>
-
 
         <li>
           <a href="resume.html" target="_blank">
@@ -64,147 +63,180 @@
         <h1>Projects</h1>
       </div>
 
-     <div class="project-grid">
-  <article class="project-card">
-    <details class="project-details">
-      <summary class="project-summary">
-        <img src="images/SpendSight.png" alt="Spend Sight App Screenshot." class="project-image">
-        <div class="project-preview-text">
-          <h2>Spend Sight</h2>
-          <h3>iOS Finance App</h3>
-          <p>Receipt scanning and spending insights iOS app.</p>
-        </div>
-        <div class="project-links">
-          <a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">
-            <i class="bi bi-box-arrow-up-right"></i> View Project Website</a>
-          <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank">
-            <i class="bi bi-github"></i> GitHub</a>
-        </div>
-        <p class="expand-hint">Click card to read more</p>
-      </summary>
+      <div class="project-grid">
+        <!-- Revved Up Project -->
+        <article class="project-card featured-project">
+          <details class="project-details">
+            <summary class="project-summary">
+              <img src="images/revvedup.png" alt="Revved Up Fitness Platform Screenshot." class="project-image">
+              <div class="project-preview-text">
+                <h2>Revved Up</h2>
+                <h3>Full-Stack Fitness Management System</h3>
+                <p>Production platform serving 70+ participants with automated program management.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://revved-up.skhs.queensu.ca/" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/chukaufo" target="_blank">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+              <p class="expand-hint">Click to read more</p>
+            </summary>
 
-      <div class="project-expanded">
-        <p>
-          Spend Sight is an iOS app that helps users turn paper receipts into clear spending insights.
-          Users can take a photo of a receipt or upload one from their phone, and the app automatically
-          reads the receipt and extracts important details like the store name, total amount spent, and date.
-          After scanning, users can choose a spending category and save the receipt. The app then tracks
-          daily and weekly spending through simple visual graphs, helping users understand where their money
-          is going and build better financial habits.
-        </p>
-        <div class="subheading">Tech Stack Used:</div>
-        <div class="item-box">
+            <div class="project-expanded">
+              <p>
+                Revved Up is a full-stack fitness management platform I architected and implemented for Queen's Kinesiology's accessible fitness program. The system transitioned 70+ participants from manual paper-based program management to a fully automated digital workflow.
+              </p>
+              <p>
+                I designed a layered TypeScript/Node.js backend (controller, service, repository pattern) with role-based access control, enabling kinesiologists, trainers, students, and participants to have secure, role-specific access. The system automates program assignment, progress tracking, and personalized feedback generation.
+              </p>
+              <p>
+                For production deployment, I configured Azure infrastructure with reverse proxy (port routing), SSL encryption, and SQLite persistence. I also integrated email automation using Resend for session reminders and program notifications. The system is deployed to the official queensu.ca domain with comprehensive documentation for long-term maintenance by Queen's IT.
+              </p>
+              <div class="subheading">Tech Stack Used:</div>
+              <div class="item-box">
+                <div class="item">TypeScript</div>
+                <div class="item">Node.js</div>
+                <div class="item">React</div>
+                <div class="item">SQLite</div>
+                <div class="item">Azure</div>
+                <div class="item">Resend</div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Spend Sight Project -->
+        <article class="project-card">
+          <details class="project-details">
+            <summary class="project-summary">
+              <img src="images/SpendSight.png" alt="Spend Sight App Screenshot." class="project-image">
+              <div class="project-preview-text">
+                <h2>Spend Sight</h2>
+                <h3>iOS Finance App</h3>
+                <p>Native iOS app with receipt scanning and spending visualizations.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> Project Website
+                </a>
+                <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+              <p class="expand-hint">Click to read more</p>
+            </summary>
+
+            <div class="project-expanded">
+              <p>
+                Spend Sight is a native iOS app that helps users track spending habits by automating receipt data extraction. Users can capture or upload a receipt photo, and the app automatically extracts details like store name, total amount, and date using Apple Vision Framework's OCR.
+              </p>
+              <p>
+                The app features a multi-view architecture including a scanner, receipt list, detail view, and insights dashboard. Data is persisted locally using Core Data, and spending trends are visualized with Swift Charts to help users understand daily and weekly spending patterns.
+              </p>
+              <div class="subheading">Tech Stack Used:</div>
+              <div class="item-box">
                 <div class="item">Swift</div>
                 <div class="item">SwiftUI</div>
                 <div class="item">Core Data</div>
-                <div class="item">Apple Vision (OCR)</div>
+                <div class="item">Apple Vision</div>
                 <div class="item">Swift Charts</div>
+              </div>
             </div>
+          </details>
+        </article>
 
-      </div>
-    </details>
-  </article>
+        <!-- Cheap Flight Ticket Finder Project -->
+        <article class="project-card">
+          <details class="project-details">
+            <summary class="project-summary">
+              <img src="images/cheapticket.png" alt="Cheap Flight Ticket Finder App Screenshot." class="project-image">
+              <div class="project-preview-text">
+                <h2>Cheap Flight Ticket Finder</h2>
+                <h3>Full-Stack Web Application</h3>
+                <p>Flight search platform with real-time API integration and airport autocomplete.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+              <p class="expand-hint">Click to read more</p>
+            </summary>
 
-  <article class="project-card">
-    <details class="project-details">
-      <summary class="project-summary">
-        <img src="images/cheapticket.png" alt="Cheap Flight Ticket Finder App Screenshot." class="project-image">
-        <div class="project-preview-text">
-          <h2>Cheap Flight Ticket Finder</h2>
-          <h3>Full-Stack Web App</h3>
-          <p>Full-stack flight search app with cheap-first results.</p>
-        </div>
-         <div class="project-links">
-          <a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">
-            <i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-          <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank">
-            <i class="bi bi-github"></i> GitHub</a>
-        </div>
-        <p class="expand-hint">Click card to read more</p>
-      </summary>
-
-      <div class="project-expanded">
-        <p>
-          Cheap Flight Finder is a full-stack web application that allows users to search for flight options
-          between airports around the world. Users can select an origin airport, destination airport, and
-          departure date to view available flight offers. The application retrieves flight data using the
-          Amadeus Flight Offers API and displays results including the airline, price, departure and arrival
-          airports, and flight times. Results are automatically shown starting from the cheapest flights,
-          helping users quickly compare affordable options. To improve usability, the search fields include
-          an airport autocomplete feature that allows users to search by city, airport name, country, or
-          IATA code. The backend server securely handles API requests and processes the results before sending
-          them to the frontend for display. <b>Note: This project uses the Amadeus Sandbox API, so the flights
-          displayed do not reflect real-time airline availability.</b>
-        </p>
-        
-        
-         </div>
-         <div class="subheading">Tech Stack Used:</div>
-         <div class="item-box">
+            <div class="project-expanded">
+              <p>
+                Cheap Flight Ticket Finder is a full-stack web application that enables users to search for flight options between airports worldwide. Users select an origin airport, destination airport, and departure date to view available flight offers sorted by price.
+              </p>
+              <p>
+                The application integrates the Amadeus Flight API with OAuth authentication and real-time data parsing, delivering sub-2 second response times. Airport autocomplete searches by city, airport code, country, and IATA code. The backend securely handles API requests and data processing before sending results to the frontend.
+              </p>
+              <p>
+                <strong>Note:</strong> This project uses the Amadeus Sandbox API, so flight results are simulated and do not reflect real-time airline availability.
+              </p>
+              <div class="subheading">Tech Stack Used:</div>
+              <div class="item-box">
                 <div class="item">Node.js</div>
                 <div class="item">Express.js</div>
-                <div class="item">Vanilla Javascript</div>
+                <div class="item">JavaScript</div>
+                <div class="item">Amadeus API</div>
+                <div class="item">OAuth</div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Online Currency Converter Project -->
+        <article class="project-card">
+          <details class="project-details">
+            <summary class="project-summary">
+              <img src="images/onlineconverter.png" alt="Online Converter Screenshot" class="project-image">
+              <div class="project-preview-text">
+                <h2>Online Currency Converter</h2>
+                <h3>Cross-Platform Application</h3>
+                <p>Desktop app transformed into responsive web application.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://uf0-tech.github.io/online-currency-converter/" target="_blank">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/chukaufo/Currency-Converter" target="_blank">
+                  <i class="bi bi-github"></i> Java GitHub
+                </a>
+                <a href="https://github.com/UF0-Tech/online-currency-converter" target="_blank">
+                  <i class="bi bi-github"></i> Web GitHub
+                </a>
+              </div>
+              <p class="expand-hint">Click to read more</p>
+            </summary>
+
+            <div class="project-expanded">
+              <p>
+                I developed a currency converter that began as a Java desktop application with live exchange rates updated every 24 hours. To improve accessibility, I transformed it into a responsive JavaScript web app, enabling users to access it directly from their browsers.
+              </p>
+              <p>
+                This project enhanced my skills in API integration, data formatting, and cross-platform development. The web version maintains all core functionality while providing a modern, responsive user interface.
+              </p>
+              <div class="subheading">Tech Stack Used:</div>
+              <div class="item-box">
+                <div class="item">Java</div>
+                <div class="item">JavaFX</div>
+                <div class="item">JavaScript</div>
                 <div class="item">HTML</div>
                 <div class="item">CSS</div>
+              </div>
             </div>
-
-    </details>
-  </article>
-
-  <article class="project-card">
-    <details class="project-details">
-      <summary class="project-summary">
-        <img src="images/onlineconverter.png" alt="Online Converter Screenshot" class="project-image">
-        <div class="project-preview-text">
-          <h2>Online Currency Converter</h2>
-          <h3>Java Desktop App & JavaScript Web App</h3>
-          <p>Responsive currency converter built from a Java app into a web app.</p>
-        </div>
-        <div class="project-links">
-
-  <a href="https://uf0-tech.github.io/online-currency-converter/" target="_blank">
-    <i class="bi bi-box-arrow-up-right"></i> Live Demo
-  </a>
-
-  <a href="https://github.com/chukaufo/Currency-Converter" target="_blank">
-    <i class="bi bi-github"></i> GitHub
-  </a>
-
-  <a href="https://github.com/UF0-Tech/online-currency-converter" target="_blank">
-    <i class="bi bi-github"></i> JS GitHub
-  </a>
-
-</div>
-        <p class="expand-hint">Click card to read more</p>
-      </summary>
-
-      <div class="project-expanded">
-        <p>
-          I developed a currency converter that began as a Java desktop application using live exchange rates
-          updated every 24 hours. To enhance accessibility and usability, I later transformed it into a responsive
-          JavaScript web app, enabling users to access it directly through their browsers. This project sharpened
-          my skills in API integration, data formatting, and cross-platform development.
-        </p>
-
-        <div class="subheading">Tech Stack Used:</div>
-
-<div class="item-box">
-    <div class="item">Java</div>
-    <div class="item">JavaFX</div>
-    <div class="item">HTML</div>
-    <div class="item">CSS</div>
-    <div class="item">JavaScript</div>
-    <div class="item">API Integration</div>
-</div>
-       
-     
-        
+          </details>
+        </article>
       </div>
-    </details>
-  </article>
-</div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Tech Stack</p>
@@ -214,46 +246,46 @@
       <div class="skills-groups">
         <div class="skill-box">
           <h2>Languages</h2>
-          <p>Python, Java, JavaScript, Swift, HTML, CSS, C/C++</p>
+          <p>Python, Swift, Java, TypeScript, JavaScript, C++, HTML, CSS</p>
         </div>
 
         <div class="skill-box">
-          <h2>Frameworks</h2>
-          <p>React, React Native, Node.js, Flask, Qt</p>
+          <h2>Frontend & Mobile</h2>
+          <p>React, React Native, SwiftUI, Figma</p>
         </div>
 
         <div class="skill-box">
-          <h2>Databases</h2>
-          <p> MySQL, Firebase, Core Data, Supabase</p>
+          <h2>Backend & Infrastructure</h2>
+          <p>Node.js, Express, Azure, Docker, API Integration</p>
         </div>
+
         <div class="skill-box">
-          <h2>Tools</h2>
-          <p>Git, Xcode, Figma, Bash</p>
+          <h2>Tools & Databases</h2>
+          <p>Git, GitHub, Xcode, SQLite, PostgreSQL, MySQL</p>
         </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
-                
-               <h2>Contacts</h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item">
-                        <i class="bi bi-linkedin linkedin-icon"></i>
-                    </a>
-                    <a href="mailto:chukauwefoh2@gmail.com" class="contact-item">
-                        <i class="bi bi-envelope email-icon"></i>
-                    </a>
-                    <a href="https://github.com/chukaufo" target="_blank" class="contact-item">
-                    <i class="bi bi-github"></i>
-                    </a>
-                </div>
-
-                
-            </section>
+      <h2>Get In Touch</h2>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank" class="contact-item" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:chukauwefoh2@gmail.com" class="contact-item" title="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://github.com/chukaufo" target="_blank" class="contact-item" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </section>
   </main>
-   <footer>
-            <p>&copy; 2026 Chuka.</p>
-        </footer>
+
+  <footer>
+    <p>&copy; 2026 Chuka. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
