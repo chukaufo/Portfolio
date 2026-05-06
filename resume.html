@@ -1,227 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chuka Uwefoh Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuka Uwefoh | Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-    font-family: Calibri, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      color: #1f2937;
+      background: #f3f4f6;
+    }
 
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+    .container {
+      max-width: 8.5in;
+      height: 11in;
+      margin: 0.5in auto;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 0.6in 0.6in;
+      font-size: 10.5pt;
+      line-height: 1.4;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+    /* Header */
+    header {
+      border-bottom: 2px solid #1f2937;
+      padding-bottom: 0.3in;
+      margin-bottom: 0.25in;
+    }
 
-header a {
-    color: #4da3ff;
-    text-decoration: underline;
-    font-weight: bold;
-}
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
+      text-align: center;
+      font-weight: 700;
+    }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 25px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
+    .header-info {
+      text-align: center;
+      font-size: 9pt;
+      color: #374151;
+      margin-top: 0.1in;
+    }
 
-section {
-    margin-bottom: 25px;
-}
+    .header-info a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-}
+    .header-info a:hover {
+      text-decoration: underline;
+    }
 
-article h3 {
-    color: #007bff;
-    margin-bottom: 5px;
-}
+    .download-btn {
+      display: inline-block;
+      margin-top: 0.15in;
+      padding: 0.35rem 0.75rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 9pt;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
 
-ul {
-    padding-left: 20px;
-}
+    .download-btn:hover {
+      background: #1d4ed8;
+    }
 
-ul li {
-    margin: 8px 0;
-}
+    @media print {
+      .download-btn {
+        display: none;
+      }
+    }
 
-a {
-    color: #007bff;
-}
+    /* Main content */
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15in;
+    }
 
-.download-btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 18px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
+    section {
+      page-break-inside: avoid;
+    }
 
-.download-btn:hover {
-    background: #0056b3;
-}
-</style>
+    h2 {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #1f2937;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 0.08in;
+      margin-bottom: 0.15in;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 10pt;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 0.15in;
+    }
+
+    /* Experience */
+    .experience-item {
+      margin-bottom: 0.2in;
+      page-break-inside: avoid;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.05in;
+    }
+
+    .experience-header h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 0;
+    }
+
+    .experience-meta {
+      font-size: 9pt;
+      color: #6b7280;
+      font-weight: 600;
+    }
+
+    .experience-item ul {
+      margin-left: 0.2in;
+      margin-top: 0.08in;
+    }
+
+    .experience-item li {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 0.06in;
+      line-height: 1.4;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 0.18in;
+      page-break-inside: avoid;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.05in;
+    }
+
+    .project-header h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 0;
+    }
+
+    .project-tech {
+      font-size: 9pt;
+      color: #6b7280;
+      font-weight: 600;
+    }
+
+    .project-tech a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project-tech a:hover {
+      text-decoration: underline;
+    }
+
+    .project-item ul {
+      margin-left: 0.2in;
+      margin-top: 0.08in;
+    }
+
+    .project-item li {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 0.06in;
+      line-height: 1.4;
+    }
+
+    /* Education */
+    .education-item h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 0.05in;
+    }
+
+    .education-meta {
+      font-size: 9pt;
+      color: #6b7280;
+      margin-bottom: 0.08in;
+    }
+
+    .education-item ul {
+      margin-left: 0.2in;
+    }
+
+    .education-item li {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 0.04in;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15in;
+    }
+
+    .skill-item {
+      font-size: 9.5pt;
+      color: #374151;
+      line-height: 1.4;
+    }
+
+    .skill-item strong {
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        padding: 0.6in;
+        height: auto;
+      }
+
+      section {
+        page-break-inside: avoid;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        max-width: 100%;
+        margin: 0.25in;
+        padding: 0.4in;
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>CHUKA UWEFOH</h1>
+      <div class="header-info">
+        <p>
+          Toronto, ON | 
+          <a href="mailto:chukauwefoh2@gmail.com">chukauwefoh2@gmail.com</a> | 
+          <a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank">LinkedIn</a> | 
+          <a href="https://github.com/chukaufo" target="_blank">GitHub</a> | 
+          <a href="https://chukaufo.github.io/" target="_blank">Portfolio</a> | 
+          +12899296236
+        </p>
+        <button class="download-btn" onclick="window.print()">Download as PDF</button>
+      </div>
+    </header>
 
-<header>
-<h1>Chuka Uwefoh</h1>
-<p>
-Toronto, ON |
-+1 289 929 6236 |
-<a href="mailto:chukauwefoh2@gmail.com">chukauwefoh2@gmail.com</a> |
-<a href="https://www.linkedin.com/in/chuka-uwefoh-6183b3277/" target="_blank">LinkedIn</a> |
-<a href="https://github.com/chukaufo" target="_blank">GitHub</a> |
-<a href="index.html">Portfolio</a>
-</p>
+    <!-- Main Content -->
+    <main>
+      <!-- Summary -->
+      <section>
+        <h2>Summary</h2>
+        <p class="summary-text">
+          Software Design graduate with production experience building full-stack systems (React, Node.js, TypeScript) and native iOS apps (Swift). Architected and implemented Revved Up (accessible fitness platform) backend serving 70+ users in production. Experienced in iOS development, system architecture, and full-stack engineering.
+        </p>
+      </section>
 
-<a href="files/Chuka Uwefoh's Resume.pdf" download class="download-btn">Download Resume PDF</a>
-</header>
+      <!-- Experience -->
+      <section>
+        <h2>Experience</h2>
 
-<main>
+        <!-- Revved Up -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Revved Up (Full-Stack System for Accessible Fitness Management)</h3>
+            <span class="experience-meta">Sept 2025 - April 2026 | <a href="https://revved-up.skhs.queensu.ca/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Live</a></span>
+          </div>
+          <ul>
+            <li>Transitioned 70+ trainers from manual to automated program management by architecting TypeScript/Node.js backend with layered architecture (controller, service, repository), which led to successful production deployment.</li>
+            <li>Prevented unauthorized access to sensitive program information by implementing role-based access control (RBAC) restricting feature access by user role (kinesiologists, trainers, students, participants), which led to secure data isolation through permission checks at service layer.</li>
+            <li>Enabled 70+ participants to access workout programs online by configuring Azure production infrastructure with reverse proxy (port routing), SSL encryption, and SQLite persistence, which led to reliable uptime and secure data storage through deployment to official queensu.ca domain with comprehensive documentation.</li>
+            <li>Ensured timely user communication by integrating email automation using Resend (session reminders, program notifications), which led to automated notifications triggered from service layer on program assignment and updates.</li>
+          </ul>
+        </div>
 
-<section>
-<h2>Summary</h2>
-<p>
-Software Design student at Queen’s University with experience building full-stack web and iOS applications using Swift, SwiftUI, React, and Node.js. Experienced in API integration and developing data-driven user interfaces.
-</p>
-</section>
+        <!-- Lead Software Developer -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Lead Software Developer, Queen's Black Tech</h3>
+            <span class="experience-meta">Sept 2025 - May 2026</span>
+          </div>
+          <ul>
+            <li>Led React/TypeScript development for Queen's Black Tech website, designing and implementing core features (navbar, contact form, events page, teams page), which led to a platform connecting 100+ Black students within the tech community to events and career opportunities.</li>
+            <li>Mentored 2 interns with no prior coding experience on Git workflows and React best practices, enabling them to implement the footer component of the Queen's Black Tech website and contribute to the production codebase.</li>
+          </ul>
+        </div>
 
-<section>
-<h2>Education</h2>
-<p>
-<strong>Queen’s University</strong> | Honours B.Comp (Software Design) | Kingston, ON | September 2022 – Present
-</p>
-<ul>
-<li>Relevant Coursework: Data Structures, Algorithms, Operating Systems, Software Quality Assurance</li>
-</ul>
-<p>
-<strong>Certificates:</strong> Meta - The Full Stack Developer Professional Certificate (June 2025)
-<a href="https://www.coursera.org/account/accomplishments/records/FU224NM85K4I" target="_blank">Certificate Link</a>
-</p>
-</section>
+        <!-- Digital Classroom Support Staff -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Digital Classroom Support Staff, Queen's IT Services</h3>
+            <span class="experience-meta">Sept 2025 - April 2026</span>
+          </div>
+          <ul>
+            <li>Resolved audio/visual and technical issues across 130+ classroom spaces to maintain classroom technology, ensuring instructor productivity and class continuity.</li>
+            <li>Responded to live support calls during lectures to restore critical classroom technology and showed instructors efficient equipment usage, enabling classes to proceed as scheduled and improve teaching effectiveness.</li>
+          </ul>
+        </div>
 
-<section>
-<h2>Experience</h2>
+        <!-- Teaching Assistant -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Teaching Assistant, CISC101 (Intro to Programming)</h3>
+            <span class="experience-meta">Sept 2023 - April 2024</span>
+          </div>
+          <ul>
+            <li>Delivered Python workshop to 200+ students, creating clear explanations of core programming concepts (loops, functions, data structures) that enabled 50+ struggling learners to grasp fundamentals and successfully complete the course.</li>
+            <li>Conducted personalized 1-on-1 tutoring sessions identifying misconceptions in student code logic and debugging approaches, which led to students progressing from zero programming knowledge to shipping their first Python programs.</li>
+          </ul>
+        </div>
+      </section>
 
-<article>
-<h3>Lead Software Developer, Queen’s Black Tech (QBT)</h3>
-<p><strong>Queen’s University | Kingston, ON | September 2025 – Present</strong></p>
-<ul>
-<li>Led development of the Queen’s Black Tech website using React and TypeScript, making architectural decisions and implementing scalable frontend components.</li>
-<li>Built responsive React UI components and improved site performance through optimized rendering and efficient component design patterns.</li>
-<li>Collaborated with a student engineering team using GitHub workflows and code reviews to maintain clean and scalable code.</li>
-</ul>
-</article>
+      <!-- Projects -->
+      <section>
+        <h2>Projects</h2>
 
-<article>
-<h3>Digital Classroom Support Staff, Queen’s University IT Services</h3>
-<p><strong>Queen’s University | Kingston, ON | September 2025 – Present</strong></p>
-<ul>
-<li>Provided real time technical support for classroom AV systems during lectures.</li>
-<li>Diagnosed and resolved hardware and software issues affecting teaching equipment.</li>
-<li>Assisted with installation and configuration of new classroom technology across campus.</li>
-</ul>
-</article>
+        <!-- Spend Sight -->
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Spend Sight iOS Finance App</h3>
+            <span class="project-tech"><a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">Website</a> • <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank">GitHub</a></span>
+          </div>
+          <ul>
+            <li>Designed native iOS receipt scanner (Swift, SwiftUI) with on-device OCR (Apple Vision) to automate expense extraction, which led to demonstrated proficiency in end-to-end iOS development through complete workflow from capture to visualization with Swift Charts.</li>
+            <li>Implemented multi-view architecture (Scanner, Receipt List, Detail, Insights) with Core Data persistence enabling local data extraction (store name, total, date), which led to complete iOS app with daily/weekly spending visualizations.</li>
+          </ul>
+        </div>
 
-<article>
-<h3>Web Developer, QWeb Development Club</h3>
-<p><strong>Queen’s University | Kingston, ON | September 2024 – April 2025</strong></p>
-<ul>
-<li>Collaborated with a student development team to design and prototype web interfaces using Figma.</li>
-<li>Implemented responsive UI components for web applications using HTML, TypeScript, and modern front-end technologies.</li>
-<li>Used Git and GitHub for version control, pull requests, and collaborative development workflows.</li>
-</ul>
-</article>
+        <!-- Cheap Flight Ticket Finder -->
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Cheap Flight Ticket Finder</h3>
+            <span class="project-tech"><a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">Live</a> • <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank">GitHub</a></span>
+          </div>
+          <ul>
+            <li>Built full-stack flight search platform (Node.js, Express, JavaScript) integrating Amadeus Flight API with OAuth authentication and real-time data parsing, which led to demonstrated proficiency in third-party API integration and production deployment with sub-2 second response times.</li>
+            <li>Implemented airport autocomplete (by code, city, country) and airline code resolution translating API codes to readable airline names, which led to complete user search workflow from airport selection to flight results display.</li>
+          </ul>
+        </div>
+      </section>
 
-<article>
-<h3>Teaching Assistant, Introduction to Computer Programming (CISC 101)</h3>
-<p><strong>Queen’s University | Kingston, ON | September 2023 – April 2024</strong></p>
-<ul>
-<li>Evaluated Python programming assignments for code quality, correctness, and efficiency, providing constructive feedback to students.</li>
-<li>Delivered clear, engaging Python tutorials, simplifying complex programming concepts and adapting explanations to diverse skill levels.</li>
-<li>Collaborated with the professor and TA team to enhance tutorial materials, share coding best practices, and improve the overall learning experience.</li>
-</ul>
-</article>
+      <!-- Education -->
+      <section>
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>Queen's University | Honours B.Comp (Software Design)</h3>
+          <div class="education-meta">September 2022 - May 2026</div>
+          <ul>
+            <li>Coursework: Data Structures, Algorithms, Operating Systems, Software Quality Assurance</li>
+          </ul>
+        </div>
+      </section>
 
-</section>
-
-<section>
-<h2>Software Projects</h2>
-
-<article>
-<h3>Spend Sight (iOS Personal Finance App)</h3>
-<p><strong>Swift, SwiftUI, Vision OCR, Core Data</strong></p>
-<ul>
-<li>Developed an iOS personal finance app with receipt scanning using Apple Vision OCR to automatically extract and categorize transaction data.</li>
-<li>Implemented Core Data for persistent local storage and offline access to financial records.</li>
-<li>Built financial dashboards using Swift Charts to visualize spending trends and improve financial insights for users.</li>
-</ul>
-<a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">Project Link</a> |
-<a href="https://github.com/chukaufo" target="_blank">GitHub</a>
-</article>
-
-<article>
-<h3>Cheap Flight Ticket Finder (Full-Stack Web Application)</h3>
-<p><strong>Node.js, Express, Amadeus API</strong></p>
-<ul>
-<li>Developed a full-stack flight search platform using Node.js and Express that retrieves and ranks flight offers using the Amadeus API.</li>
-<li>Implemented backend REST endpoints to manage API authentication and process flight search queries.</li>
-<li>Built an autocomplete airport search feature supporting queries by city, airport name, country, or IATA code.</li>
-</ul>
-<a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">Project Link</a> |
-<a href="https://github.com/chukaufo" target="_blank">GitHub</a>
-</article>
-
-<article>
-<h3>Currency Converter (Java / JavaScript Project)</h3>
-<p><strong>Java, JavaFX, REST API, JavaScript, HTML, CSS</strong></p>
-<ul>
-<li>Built a desktop currency converter using Java and JavaFX with a graphical user interface.</li>
-<li>Integrated an exchange rate API to fetch and display conversion rates updated daily.</li>
-<li>Later rebuilt the project as a responsive JavaScript web application to make it accessible through browsers.</li>
-</ul>
-<a href="https://uf0-tech.github.io/online-currency-converter/" target="_blank">Project Link</a> |
-<a href="https://github.com/chukaufo" target="_blank">GitHub [Java Version]</a> |
-<a href="https://github.com/chukaufo" target="_blank">GitHub [Web Version]</a>
-</article>
-
-</section>
-
-<section>
-<h2>Skills</h2>
-<ul>
-<li><strong>Languages:</strong> Python, Swift, Java, TypeScript, JavaScript (ES6), C++, HTML, CSS</li>
-<li><strong>Frameworks:</strong> React, React Native, Node.js, Express, Flask, Qt</li>
-<li><strong>Databases:</strong> MySQL, Firebase, Core Data, Supabase</li>
-<li><strong>Tools:</strong> Git, GitHub, Xcode, Figma, Bash</li>
-</ul>
-</section>
-
-</main>
-
+      <!-- Skills -->
+      <section>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <strong>Languages:</strong> Python, Swift, Java, TypeScript, JavaScript, C++, HTML, CSS
+          </div>
+          <div class="skill-item">
+            <strong>Frameworks:</strong> React, React Native, Node.js, Express, SwiftUI
+          </div>
+          <div class="skill-item">
+            <strong>Tools:</strong> Git, GitHub, Xcode, Figma, Bash
+          </div>
+          <div class="skill-item">
+            <strong>Databases:</strong> MySQL, PostgreSQL, SQLite
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
+
 </html>
