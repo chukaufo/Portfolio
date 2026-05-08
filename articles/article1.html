@@ -12,61 +12,67 @@
   <style>
     body {
       transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    body.light-mode {
       background: #ffffff;
       color: #1f2937;
     }
 
-    body.light-mode .article-container {
-      background: #ffffff;
+    body.dark-mode {
+      background: #000000;
+      color: #ffffff;
     }
 
-    body.light-mode .article-content {
-      color: #4b5563;
+    body.dark-mode .article-container {
+      background: #000000;
     }
 
-    body.light-mode .article-content h2,
-    body.light-mode .article-content h3,
-    body.light-mode .article-header h1 {
-      color: #1f2937;
+    body.dark-mode .article-content {
+      color: #ffffff;
     }
 
-    body.light-mode .article-content strong {
-      color: #1f2937;
+    body.dark-mode .article-content h2,
+    body.dark-mode .article-content h3,
+    body.dark-mode .article-header h1 {
+      color: #ffffff;
     }
 
-    body.light-mode .article-byline {
-      color: #6b7280;
+    body.dark-mode .article-content strong {
+      color: #ffffff;
     }
 
-    body.light-mode .back-button {
-      color: #7c3aed;
+    body.dark-mode .article-byline {
+      color: #d1d5db;
     }
 
-    body.light-mode .back-button:hover {
-      color: #1f2937;
+    body.dark-mode .article-content li {
+      color: #ffffff;
     }
 
-    body.light-mode .article-links {
-      border-top: 1px solid #e5e7eb;
+    body.dark-mode .back-button {
+      color: #8b5cf6;
     }
 
-    body.light-mode .article-links a {
-      color: #7c3aed;
+    body.dark-mode .back-button:hover {
+      color: #c4b5fd;
     }
 
-    body.light-mode .article-links a:hover {
-      color: #1f2937;
+    body.dark-mode .article-links {
+      border-top: 1px solid #333333;
     }
 
-    body.light-mode footer {
-      border-top: 1px solid #e5e7eb;
+    body.dark-mode .article-links a {
+      color: #8b5cf6;
     }
 
-    body.light-mode footer p {
-      color: #6b7280;
+    body.dark-mode .article-links a:hover {
+      color: #c4b5fd;
+    }
+
+    body.dark-mode footer {
+      border-top: 1px solid #333333;
+    }
+
+    body.dark-mode footer p {
+      color: #d1d5db;
     }
 
     .theme-toggle {
@@ -76,20 +82,31 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      background: rgba(139, 92, 246, 0.12);
-      border: 1px solid rgba(139, 92, 246, 0.25);
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
       border-radius: 50px;
       padding: 0.5rem 1rem;
       cursor: pointer;
       font-weight: 600;
-      color: var(--accent-light);
+      color: #1f2937;
       transition: 0.2s ease;
       z-index: 100;
     }
 
     .theme-toggle:hover {
-      background: rgba(139, 92, 246, 0.25);
-      border-color: rgba(139, 92, 246, 0.45);
+      background: #e5e7eb;
+      border-color: #d1d5db;
+    }
+
+    body.dark-mode .theme-toggle {
+      background: #1f2937;
+      border: 1px solid #333333;
+      color: #ffffff;
+    }
+
+    body.dark-mode .theme-toggle:hover {
+      background: #374151;
+      border-color: #4b5563;
     }
 
     .theme-toggle i {
@@ -125,7 +142,7 @@
     }
 
     .article-byline {
-      color: var(--text-soft);
+      color: #6b7280;
       font-size: 0.95rem;
       margin-bottom: 0.5rem;
     }
@@ -133,21 +150,21 @@
     .article-content {
       font-size: 1rem;
       line-height: 1.8;
-      color: var(--text-soft);
+      color: #4b5563;
     }
 
     .article-content h2 {
       font-size: 1.5rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
-      color: var(--text-main);
+      color: #1f2937;
     }
 
     .article-content h3 {
       font-size: 1.2rem;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      color: var(--text-main);
+      color: #1f2937;
     }
 
     .article-content p {
@@ -161,18 +178,18 @@
 
     .article-content li {
       margin-bottom: 0.5rem;
-      color: var(--text-soft);
+      color: #4b5563;
     }
 
     .article-content strong {
-      color: var(--text-main);
+      color: #1f2937;
     }
 
     .back-button {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--accent-light);
+      color: #7c3aed;
       text-decoration: none;
       font-weight: 600;
       margin-bottom: 2rem;
@@ -180,33 +197,33 @@
     }
 
     .back-button:hover {
-      color: var(--text-main);
+      color: #6d28d9;
     }
 
     .article-links {
       margin-top: 3rem;
       padding-top: 2rem;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #e5e7eb;
     }
 
     .article-links a {
-      color: var(--accent-light);
+      color: #7c3aed;
       text-decoration: none;
       font-weight: 600;
     }
 
     .article-links a:hover {
-      color: var(--text-main);
+      color: #6d28d9;
     }
 
     footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid #e5e7eb;
       padding: 1.5rem;
       text-align: center;
     }
 
     footer p {
-      color: var(--text-soft);
+      color: #6b7280;
       font-size: 0.95rem;
       opacity: 0.9;
     }
@@ -352,18 +369,18 @@
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
 
-    // Check for saved theme preference or default to dark mode
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    body.classList.add(currentTheme + '-mode');
-    updateToggleButton();
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      body.classList.add('dark-mode');
+      updateToggleButton();
+    }
 
     themeToggle.addEventListener('click', () => {
       if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
         localStorage.setItem('theme', 'light');
       } else {
-        body.classList.remove('light-mode');
         body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark');
       }
@@ -371,7 +388,7 @@
     });
 
     function updateToggleButton() {
-      if (body.classList.contains('light-mode')) {
+      if (body.classList.contains('dark-mode')) {
         themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i><span>Light</span>';
       } else {
         themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i><span>Dark</span>';
