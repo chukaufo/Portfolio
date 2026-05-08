@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Requirements Gathering is Essential | Chuka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .article-header {
+      margin-bottom: 3rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-byline {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-soft);
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .article-content h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .article-content ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: var(--text-soft);
+    }
+
+    .article-content strong {
+      color: var(--text-main);
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-light);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      transition: 0.2s ease;
+    }
+
+    .back-button:hover {
+      color: var(--text-main);
+    }
+
+    .article-links {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .article-links a {
+      color: var(--accent-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-links a:hover {
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <main class="article-container">
+    <a href="writing.html" class="back-button">
+      <i class="bi bi-arrow-left"></i> Back to Writing
+    </a>
+
+    <article class="article-header">
+      <h1>Why Requirements Gathering is Essential for Building Projects</h1>
+      <p class="article-byline">By Chuka Uwefoh</p>
+    </article>
+
+    <div class="article-content">
+      <p>
+        When I started working on various projects, one thing became clear: requirements gathering is an overlooked phase that's absolutely critical, especially for systems with multiple features and real users.
+      </p>
+
+      <p>
+        Let me illustrate with <strong>Revved Up</strong>, a web app I built with four other developers for an accessible fitness gym serving adults with mobility impairments and developmental disabilities.
+      </p>
+
+      <h2>The Problem</h2>
+
+      <p>
+        Revved Up's staff were managing exercise programs entirely manually. Trainers would search through physical files to find participant programs. The organization had strict role hierarchies:
+      </p>
+
+      <ul>
+        <li><strong>Kinesiologists</strong> (could do everything)</li>
+        <li><strong>Trainers</strong> (create and manage programs, assist participants)</li>
+        <li><strong>Students</strong> (view programs, assist participants only)</li>
+        <li><strong>Participants</strong> (view their own programs)</li>
+      </ul>
+
+      <p>
+        This complexity meant the system would be heavy on role-based access control (RBAC) from day one.
+      </p>
+
+      <h2>Our Approach to Requirements Gathering</h2>
+
+      <p>
+        We didn't rush into building. We spent 4 months out of our 12-month timeline on requirements gathering and design, roughly one-third of the project.
+      </p>
+
+      <p>
+        What we did:
+      </p>
+
+      <ul>
+        <li>Interviewed 2 kinesiologists multiple times across the timeframe to understand their workflows and decision-making</li>
+        <li>Observed 2 active gym sessions to see how trainers, students, and participants actually worked together</li>
+        <li>Documented pain points in their manual system</li>
+        <li>Shadowed staff to understand daily processes</li>
+      </ul>
+
+      <p>
+        This wasn't overkill. We became embedded in their process, understanding not just what they needed, but why they needed it.
+      </p>
+
+      <h2>RBAC Design from Real Understanding</h2>
+
+      <p>
+        Because we observed their workflows, we designed RBAC that matched their reality:
+      </p>
+
+      <ul>
+        <li><strong>Kinesiologists</strong> → Full admin access (research, oversight, all operations)</li>
+        <li><strong>Trainers</strong> → Create and manage programs for their assigned participants, read-only on others</li>
+        <li><strong>Students</strong> → Read-only access to exercise programs (assist without modifying)</li>
+        <li><strong>Participants</strong> → Access only their own programs</li>
+      </ul>
+
+      <p>
+        Without observing actual gym sessions, we might have given everyone read/write access or over-restricted trainers. Instead, we built permissions that mirrored their real workflow.
+      </p>
+
+      <h2>The Impact</h2>
+
+      <p>
+        Because we gathered requirements thoroughly, we avoided building features that sounded useful but weren't needed. For example, we initially assumed medical records would be a core feature but the client explicitly rejected this. Without proper requirements gathering, we would have wasted weeks building something they'd never use.
+      </p>
+
+      <h2>The Results</h2>
+
+      <p>
+        At handoff, the client requested only two minor changes:
+      </p>
+
+      <ol style="margin-left: 1.5rem; margin-bottom: 1.25rem;">
+        <li>Change "patients" to "participants" in the UI</li>
+        <li>Update the logo</li>
+      </ol>
+
+      <p>
+        That's it. The system worked exactly as they expected because we invested time upfront understanding their needs.
+      </p>
+
+      <p>
+        If we had skipped requirements gathering, we likely would have built:
+      </p>
+
+      <ul>
+        <li>Unnecessary features (like medical records storage)</li>
+        <li>Poor RBAC design that didn't match their role hierarchy</li>
+        <li>Workflows that didn't align with how they actually operated</li>
+        <li>A system they'd need to heavily modify during implementation</li>
+      </ul>
+
+      <h2>The Lesson</h2>
+
+      <p>
+        Requirements gathering isn't a box to check. It's an investment. The time you spend understanding the problem prevents you from solving the wrong one.
+      </p>
+
+      <p>
+        Spend 25-33% of your project timeline on requirements gathering. It's worth it.
+      </p>
+
+      <div class="article-links">
+        <p>Learn more about Revved Up:</p>
+        <ul style="margin-left: 1.5rem;">
+          <li><a href="https://revvedupgroup.ca/" target="_blank">Revved Up Official Site</a></li>
+          <li><a href="https://revved-up.skhs.queensu.ca/" target="_blank">Revved Up Web App</a> (invite-only access)</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Chuka. All rights reserved.</p>
+  </footer>
+</body>
+</html>
