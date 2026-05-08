@@ -35,14 +35,15 @@
 
           <ul class="dropdown-menu">
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="experience.html">
-            <i class="bi bi-briefcase"></i>
-            <span>Experience</span>
+          <a href="writing.html">
+            <i class="bi bi-pencil-square"></i>
+            <span>Writing</span>
           </a>
         </li>
 
@@ -57,6 +58,7 @@
   </header>
 
   <main class="page-content">
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Featured Work</p>
@@ -64,47 +66,6 @@
       </div>
 
       <div class="project-grid">
-        <!-- Revved Up Project -->
-        <article class="project-card featured-project">
-          <details class="project-details">
-            <summary class="project-summary">
-              <img src="images/revvedup.png" alt="Revved Up Fitness Platform Screenshot." class="project-image">
-              <div class="project-preview-text">
-                <h2>Revved Up</h2>
-                <h3>Full-Stack Fitness Management System</h3>
-                <p>Production platform serving 70+ participants with automated program management.</p>
-              </div>
-              <div class="project-links">
-                <a href="https://revved-up.skhs.queensu.ca/" target="_blank">
-                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
-                </a>
-              </div>
-              <p class="expand-hint">Click to read more</p>
-            </summary>
-
-            <div class="project-expanded">
-              <p>
-                Revved Up is a full-stack fitness management platform I architected and implemented for Queen's Kinesiology's accessible fitness program. The system transitioned 70+ participants from manual paper-based program management to a fully automated digital workflow.
-              </p>
-              <p>
-                I designed a layered TypeScript/Node.js backend (controller, service, repository pattern) with role-based access control, enabling kinesiologists, trainers, students, and participants to have secure, role-specific access. The system automates program assignment, progress tracking, and personalized feedback generation.
-              </p>
-              <p>
-                For production deployment, I configured Azure infrastructure with reverse proxy (port routing), SSL encryption, and SQLite persistence. I also integrated email automation using Resend for session reminders and program notifications. The system is deployed to the official queensu.ca domain with comprehensive documentation for long-term maintenance by Queen's IT.
-              </p>
-              <div class="subheading">Tech Stack Used:</div>
-              <div class="item-box">
-                <div class="item">TypeScript</div>
-                <div class="item">Node.js</div>
-                <div class="item">React</div>
-                <div class="item">SQLite</div>
-                <div class="item">Azure</div>
-                <div class="item">Resend</div>
-              </div>
-            </div>
-          </details>
-        </article>
-
         <!-- Spend Sight Project -->
         <article class="project-card">
           <details class="project-details">
@@ -233,7 +194,59 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Career</p>
+        <h1>Experience</h1>
+      </div>
+
+      <div class="experience-list">
+        <!-- Revved Up Capstone Project -->
+        <article class="experience-card featured-card">
+          <h2>Revved Up (Full-Stack Capstone Project)</h2>
+          <p class="meta">Queen's Kinesiology • Sep 2025 – Apr 2026</p>
+          <p class="experience-description">
+            Architected and implemented a production fitness management platform serving 70+ participants in Queen's Kinesiology's accessible fitness program. Designed a layered TypeScript/Node.js backend with role-based access control, configured Azure production infrastructure with reverse proxy and SSL encryption, and integrated email automation. Deployed to official queensu.ca domain with comprehensive documentation for long-term maintenance.
+          </p>
+          <div class="experience-highlights">
+            <span class="highlight-tag">Architecture</span>
+            <span class="highlight-tag">Full-Stack</span>
+            <span class="highlight-tag">Production</span>
+            <span class="highlight-tag">70+ Users</span>
+          </div>
+        </article>
+
+        <!-- Lead Software Developer -->
+        <article class="experience-card">
+          <h2>Lead Software Developer</h2>
+          <p class="meta">Queen's Black Tech • Sep 2025 – May 2026</p>
+          <p class="experience-description">
+            Led React/TypeScript frontend development for student organization website, designing and implementing core features (navbar, contact form, events page, teams page). Mentored 2 interns with no prior coding experience on Git workflows and React best practices, enabling them to implement the footer component and contribute to the production codebase.
+          </p>
+        </article>
+
+        <!-- Digital Classroom Support Staff -->
+        <article class="experience-card">
+          <h2>Digital Classroom Support Staff</h2>
+          <p class="meta">Queen's IT Services • Sep 2025 – Apr 2026</p>
+          <p class="experience-description">
+            Resolved audio/visual and technical issues across 130+ classroom spaces to maintain classroom technology and ensure instructor productivity. Responded to live support calls during lectures to restore critical classroom technology, enabling classes to proceed as scheduled.
+          </p>
+        </article>
+
+        <!-- Teaching Assistant -->
+        <article class="experience-card">
+          <h2>Teaching Assistant, CISC101 (Intro to Programming)</h2>
+          <p class="meta">Queen's University • Sep 2023 – Apr 2024</p>
+          <p class="experience-description">
+            Delivered Python workshops to 200+ students, creating clear explanations of core programming concepts (loops, functions, data structures) that enabled 50+ struggling learners to grasp fundamentals and successfully complete the course. Conducted personalized 1-on-1 tutoring sessions identifying misconceptions in code logic and debugging approaches.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
     <section id="skills" class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Tech Stack</p>
