@@ -62,12 +62,16 @@
       text-decoration: underline;
     }
 
-    .download-btn {
-      display: inline-block;
+    .header-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
       margin-top: 0.12in;
+    }
+
+    .download-btn, .print-btn {
+      display: inline-block;
       padding: 0.5rem 1.2rem;
-      background: #2563eb;
-      color: white;
       border: none;
       border-radius: 5px;
       font-size: 11pt;
@@ -77,13 +81,28 @@
       letter-spacing: 0.05em;
     }
 
+    .download-btn {
+      background: #2563eb;
+      color: white !important;
+    }
+
     .download-btn:hover {
       background: #1d4ed8;
       transform: scale(1.05);
     }
 
+    .print-btn {
+      background: #374151;
+      color: white;
+    }
+
+    .print-btn:hover {
+      background: #1f2937;
+      transform: scale(1.05);
+    }
+
     @media print {
-      .download-btn {
+      .download-btn, .print-btn, .header-actions {
         display: none;
       }
       body {
@@ -284,9 +303,10 @@
           <a href="https://chukaufo.github.io/Portfolio/" target="_blank">Portfolio</a> | 
           +12899296236
         </p>
-        <p>
-          <a href="files/Chuka_Uwefoh_Resume.pdf" download>Download PDF</a>
-        </p>
+        <div class="header-actions">
+          <a class="download-btn" href="files/Chuka_Uwefoh_Resume.pdf" download>Download PDF</a>
+          <button class="print-btn" onclick="window.print()">Print</button>
+        </div>
       </div>
     </header>
 
@@ -296,7 +316,7 @@
       <section>
         <h2>Summary</h2>
         <p class="summary-text">
-          Software Design graduate with production experience building full-stack systems (React, Node.js, TypeScript) and native iOS apps (Swift). Architected and implemented Revved Up (accessible fitness platform) backend serving 70+ users in production. Experienced in iOS development, system architecture, and full-stack engineering.
+          Software Design graduate who ships production systems. Founded B2C SaaS (Uforiya) architecting complete stack solo with all technical decisions independently owned. Transformed manual workflows into automated digital solutions: Revved Up transitioned trainer program management from paper-based processes to fully automated system serving 70+ users.
         </p>
       </section>
 
@@ -307,14 +327,13 @@
         <!-- Revved Up -->
         <div class="experience-item">
           <div class="experience-header">
-            <h3>Revved Up (Full-Stack System for Accessible Fitness Management)</h3>
+            <h3>Revved Up (Full-Stack System for Accessible Fitness Management) | Backend Developer</h3>
             <span class="experience-meta">Sept 2025 - April 2026 | <a href="https://revved-up.skhs.queensu.ca/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Live</a></span>
           </div>
           <ul>
-            <li>Transitioned 70+ trainers from manual to automated program management by architecting TypeScript/Node.js backend with layered architecture (controller, service, repository), which led to successful production deployment.</li>
-            <li>Prevented unauthorized access to sensitive program information by implementing role-based access control (RBAC) restricting feature access by user role (kinesiologists, trainers, students, participants), which led to secure data isolation through permission checks at service layer.</li>
-            <li>Enabled 70+ participants to access workout programs online by configuring Azure production infrastructure with reverse proxy (port routing), SSL encryption, and SQLite persistence, which led to reliable uptime and secure data storage through deployment to official queensu.ca domain with comprehensive documentation.</li>
-            <li>Ensured timely user communication by integrating email automation using Resend (session reminders, program notifications), which led to automated notifications triggered from service layer on program assignment and updates.</li>
+            <li>Transitioned trainer program management from manual paper-based processes to a fully automated system, eliminating 3-6 hours of manual administrative work per trainer per week, by architecting a TypeScript/Node.js backend with layered architecture (controller, service, repository), resulting in successful production deployment.</li>
+            <li>Prevented unauthorized access to sensitive program information by implementing role-based access control (RBAC) restricting feature access by user role (kinesiologists, trainers, students, participants) with permission checks at service layer.</li>
+            <li>Enabled 70+ participants to access workout programs online by configuring Azure production infrastructure with reverse proxy (port routing), SSL encryption, and SQLite persistence, deploying to official queensu.ca domain with comprehensive documentation.</li>
           </ul>
         </div>
 
@@ -325,32 +344,32 @@
             <span class="experience-meta">Sept 2025 - May 2026</span>
           </div>
           <ul>
-            <li>Led React/TypeScript development for Queen's Black Tech website, designing and implementing core features (navbar, contact form, events page, teams page), which led to a platform connecting 100+ Black students within the tech community to events and career opportunities.</li>
-            <li>Mentored 2 interns with no prior coding experience on Git workflows and React best practices, enabling them to implement the footer component of the Queen's Black Tech website and contribute to the production codebase.</li>
+            <li>Led React/TypeScript development for Queen's Black Tech website, designing and implementing core features (navbar, contact form, events page, teams page), connecting 100+ Black students within the tech community to events and career opportunities.</li>
+            <li>Mentored 2 interns with no prior coding experience on Git workflows and React best practices, enabling them to ship production features independently.</li>
           </ul>
         </div>
 
         <!-- Digital Classroom Support Staff -->
         <div class="experience-item">
           <div class="experience-header">
-            <h3>Digital Classroom Support Staff, Queen's IT Services</h3>
+            <h3>Digital Classroom Support Staff, Queen's University IT Services</h3>
             <span class="experience-meta">Sept 2025 - April 2026</span>
           </div>
           <ul>
-            <li>Resolved audio/visual and technical issues across 130+ classroom spaces to maintain classroom technology, ensuring instructor productivity and class continuity.</li>
-            <li>Responded to live support calls during lectures to restore critical classroom technology and showed instructors efficient equipment usage, enabling classes to proceed as scheduled and improve teaching effectiveness.</li>
+            <li>Performed preventive maintenance and diagnostics across 130+ classroom spaces, resolving A/V hardware issues (mics, projectors, displays) directly and escalating specialized issues to senior technicians, ensuring system reliability and minimizing downtime.</li>
+            <li>Responded to emergency support calls during lectures to troubleshoot and restore A/V equipment (mics, projectors, displays), minimizing class disruption and maintaining teaching effectiveness.</li>
           </ul>
         </div>
 
         <!-- Teaching Assistant -->
         <div class="experience-item">
           <div class="experience-header">
-            <h3>Teaching Assistant, CISC101 (Intro to Programming)</h3>
-            <span class="experience-meta">Sept 2023 - April 2024</span>
+            <h3>Teaching Assistant, CISC101 (Intro to Programming) | Queen's University</h3>
+            <span class="experience-meta">Sept 2023 – April 2024</span>
           </div>
           <ul>
-            <li>Delivered Python workshop to 200+ students, creating clear explanations of core programming concepts (loops, functions, data structures) that enabled 50+ struggling learners to grasp fundamentals and successfully complete the course.</li>
-            <li>Conducted personalized 1-on-1 tutoring sessions identifying misconceptions in student code logic and debugging approaches, which led to students progressing from zero programming knowledge to shipping their first Python programs.</li>
+            <li>Delivered Python workshop to 200+ students, creating clear explanations of core programming concepts (loops, functions, data structures) enabling 50+ struggling learners to grasp fundamentals and successfully complete the course.</li>
+            <li>Conducted 1-on-1 tutoring sessions helping 50+ students debug code and progress from zero programming knowledge to completing their first Python programs.</li>
           </ul>
         </div>
       </section>
@@ -359,27 +378,17 @@
       <section>
         <h2>Projects</h2>
 
-        <!-- Spend Sight -->
+        <!-- Uforiya -->
         <div class="project-item">
           <div class="project-header">
-            <h3>Spend Sight iOS Finance App</h3>
-            <span class="project-tech"><a href="https://chukaufo.github.io/Spend-Sight/" target="_blank">Website</a> • <a href="https://github.com/chukaufo/Spend-Sight/" target="_blank">GitHub</a></span>
+            <h3>Uforiya - Music Collaboration Platform | Founder &amp; Solo Developer</h3>
+            <span class="project-tech">TypeScript, Next.js, Python, React | <a href="#" target="_blank">Live</a></span>
           </div>
           <ul>
-            <li>Designed native iOS receipt scanner (Swift, SwiftUI) with on-device OCR (Apple Vision) to automate expense extraction, which led to demonstrated proficiency in end-to-end iOS development through complete workflow from capture to visualization with Swift Charts.</li>
-            <li>Implemented multi-view architecture (Scanner, Receipt List, Detail, Insights) with Core Data persistence enabling local data extraction (store name, total, date), which led to complete iOS app with daily/weekly spending visualizations.</li>
-          </ul>
-        </div>
-
-        <!-- Cheap Flight Ticket Finder -->
-        <div class="project-item">
-          <div class="project-header">
-            <h3>Cheap Flight Ticket Finder</h3>
-            <span class="project-tech"><a href="https://cheap-flight-finder-zlj0.onrender.com" target="_blank">Live</a> • <a href="https://github.com/chukaufo/cheap-flight-finder/" target="_blank">GitHub</a></span>
-          </div>
-          <ul>
-            <li>Built full-stack flight search platform (Node.js, Express, JavaScript) integrating Amadeus Flight API with OAuth authentication and real-time data parsing, which led to demonstrated proficiency in third-party API integration and production deployment with sub-2 second response times.</li>
-            <li>Implemented airport autocomplete (by code, city, country) and airline code resolution translating API codes to readable airline names, which led to complete user search workflow from airport selection to flight results display.</li>
+            <li>Founded and shipped B2C SaaS solo, architected complete stack (cloud storage → database → backend API → audio worker → frontend), leveraging Claude for implementation support on non-critical paths, resulting in production platform serving real users.</li>
+            <li>Built serverless full-stack using Vercel, Supabase, Cloudflare, eliminating ops overhead and enabling instant deployments with automatic scaling.</li>
+            <li>Implemented client-server security model with backend-enforced permissions and RLS policies, eliminating frontend permission logic and securing sensitive data at the backend layer.</li>
+            <li>Published detailed architectural decision article documenting backend-first approach, serverless tradeoffs, and security-first thinking, demonstrating ability to articulate technical philosophy and reasoning behind design choices. <a href="#" target="_blank">[Link]</a></li>
           </ul>
         </div>
       </section>
@@ -401,13 +410,13 @@
         <h2>Skills</h2>
         <div class="skills-grid">
           <div class="skill-item">
-            <strong>Languages:</strong> Python, Swift, Java, TypeScript, JavaScript, C++, HTML, CSS
+            <strong>Languages:</strong> TypeScript, JavaScript, Python, Swift, Java, C++, HTML, CSS
           </div>
           <div class="skill-item">
-            <strong>Frameworks:</strong> React, React Native, Node.js, Express, SwiftUI
+            <strong>Frameworks:</strong> React, Next.js, Node.js, SwiftUI
           </div>
           <div class="skill-item">
-            <strong>Tools:</strong> Git, GitHub, Xcode, Figma, Bash
+            <strong>Tools:</strong> Git, GitHub, Vercel, Azure, Supabase, Cloudflare, Xcode, Figma, Bash
           </div>
           <div class="skill-item">
             <strong>Databases:</strong> MySQL, PostgreSQL, SQLite
