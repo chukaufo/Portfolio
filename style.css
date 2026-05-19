@@ -80,9 +80,9 @@ a {
 }
 
 .navbar {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 1rem 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,7 +215,7 @@ main {
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 1000px;
     font-size: 1.1rem;
     color: var(--text-soft);
 }
@@ -940,13 +940,11 @@ footer p {
   font-weight: 800;
   letter-spacing: -0.03em;
   flex-shrink: 0;
-  margin-right: auto;
-  margin-left: 0;
 }
 
 .logo-img {
-  width: 86px;
-  height: 86px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   flex-shrink: 0;
 }

@@ -12,48 +12,9 @@
 
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <img src="images/chukaufo.PNG" alt="Chuka logo" class="logo-img">
-        Chuka
-      </a>
-      <ul class="nav-links">
-        <li>
-          <a href="index.html" class="logo">
-          <img src="images/chukaufo.PNG" alt="Chuka logo" class="logo-img">
-          Chuka
-        </a>
-        </li>
-        <li class="dropdown">
-          <button class="dropdown-toggle" type="button">
-            <span class="nav-link-inner">
-              <i class="bi bi-code-slash"></i>
-              <span>Work</span>
-              <i class="bi bi-chevron-down"></i>
-            </span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="work.html#projects">Projects</a></li>
-            <li><a href="work.html#experience">Experience</a></li>
-            <li><a href="work.html#skills">Skills</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="writing.html">
-            <i class="bi bi-pencil-square"></i>
-            <span>Writing</span>
-          </a>
-        </li>
-        <li>
-          <a href="resume.html" target="_blank">
-            <i class="bi bi-file-earmark-text"></i>
-            <span>Resume</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+ <header class="site-header">
+  <div id="navbar"></div>
+</header>
 
   <main>
     <!-- Hero Section -->
@@ -61,14 +22,14 @@
       <p class="eyebrow">Software Developer</p>
       <h1>Hi, I'm Chuka.</h1>
       <p class="hero-text">
-        I architect and build production systems that solve real problems. Specialized in full-stack development, iOS apps, and scalable backend systems.
+        I care a lot about how software is built, not just that it works. Architecture is what gets me, understanding what a system actually needs, and why, before a single decision is made. I'm a full-stack developer with experience in backend systems and iOS projects, and I'm at my best when I'm thinking through the design of something from the ground up.
       </p>
       <img src="images/chukapro.JPG" alt="Picture of me" class="hero-image">
       <div class="hero-actions">
-        <a href="work.html#projects" class="btn btn-primary">View Projects</a>
-        <a href="#about" class="btn btn-secondary">Learn More</a>
-        <a href="resume.html" target="_blank" class="btn btn-secondary">Resume</a>
-      </div>
+  <a href="/Portfolio/work/" class="btn btn-primary">View Projects</a>
+  <a href="#about" class="btn btn-secondary">Learn More</a>
+  <a href="/Portfolio/resume/" target="_blank" class="btn btn-secondary">Resume</a>
+</div>
     </section>
 
    <!-- About / Bio Section -->
@@ -77,13 +38,13 @@
         <h2>About Me</h2>
         <div class="bio-content">
           <p>
-            I'm a <strong>Software Design graduate</strong> from Queen's University with production experience building full-stack systems and native iOS applications. I specialize in architecting scalable backends, implementing role-based access control, and deploying secure infrastructure.
+            I'm a <strong>Software Design graduate</strong> from Queen's University with production experience building full-stack systems and native iOS applications. I specialize in architecting scalable systems and implementing them end to end.
           </p>
           <p>
-            I'm passionate about writing clean, maintainable code and mentoring other developers. I enjoy working across the full stack: designing scalable backend systems, building responsive frontends, and creating native mobile apps. When I'm not coding, I'm exploring new technologies and contributing to open-source projects.
+            Outside of work, I'm a big Arsenal fan and I love football. Music is another big part of my life, I make beats in my free time, and that passion is actually what led me to build Uforiya, my first B2C SaaS. Uforiya is a collaboration platform for artists, producers, and anyone involved in the creative process of making music. I designed the entire client-server architecture and built it solo. Phase 1 (backend and web app) is live, and phase 2, a mobile app, is coming next.
           </p>
           <p>
-            I'm currently looking for entry-level software engineering roles where I can continue building production systems and grow alongside experienced engineers. Whether it's backend architecture, iOS development, or full-stack work, I'm ready to contribute.
+            I'm currently looking for entry-level software engineering roles where I can build production systems and grow alongside experienced engineers. I'm open to any software developer or engineering role, whether that's backend, frontend, full-stack, iOS, or anything in between.
           </p>
         </div>
       </div>
@@ -143,7 +104,7 @@
         <p>I'm always interested in discussing new projects, opportunities, and tech. Feel free to reach out.</p>
         <div class="cta-actions">
           <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="work.html#projects" class="btn btn-secondary">View My Work</a>
+          <a href="/Portfolio/work/" class="btn btn-secondary">View My Work</a>
         </div>
       </div>
     </section>
@@ -168,7 +129,7 @@
   <footer>
     <p>&copy; 2026 Chuka. All rights reserved.</p>
   </footer>
-
+ <script src="navbar.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
