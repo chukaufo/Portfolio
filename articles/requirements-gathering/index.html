@@ -227,6 +227,152 @@
       font-size: 0.95rem;
       opacity: 0.9;
     }
+
+    .architecture-diagram {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    overflow-x: auto;
+  }
+
+  body.dark-mode .architecture-diagram {
+    background: #111827;
+  }
+
+  .diagram-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-width: 600px;
+  }
+
+  .diagram-layer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .diagram-box {
+    background: #ffffff;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 180px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  body.dark-mode .diagram-box {
+    background: #1f2937;
+    border-color: #374151;
+    color: #ffffff;
+  }
+
+  .diagram-box.solid {
+    border: 2px solid #374151;
+    border-style: solid;
+  }
+
+  body.dark-mode .diagram-box.solid {
+    border-color: #6b7280;
+  }
+
+  .diagram-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .diagram-row.two-col {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .arrow {
+    width: 3px;
+    height: 2rem;
+    background: #9ca3af;
+    margin: -1rem 0;
+    position: relative;
+  }
+
+  .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #9ca3af;
+  }
+
+  body.dark-mode .arrow {
+    background: #6b7280;
+  }
+
+  body.dark-mode .arrow::after {
+    border-top-color: #6b7280;
+  }
+
+  .diagram-label {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+
+  body.dark-mode .diagram-label {
+    color: #9ca3af;
+  }
+
+  .layer-group {
+    width: 100%;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    background: transparent;
+  }
+
+  body.dark-mode .layer-group {
+    border-color: #374151;
+  }
+
+  .layer-title {
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  body.dark-mode .layer-title {
+    color: #9ca3af;
+  }
+
+  @media (max-width: 640px) {
+    .diagram-container {
+      min-width: 100%;
+    }
+
+    .diagram-box {
+      min-width: 140px;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .diagram-row {
+      gap: 1rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -291,9 +437,87 @@
         <li>Shadowed staff to understand daily processes</li>
       </ul>
 
-      <p>
-        This wasn't overkill. We became embedded in their process, understanding not just what they needed, but why they needed it.
-      </p>
+<p>
+  This wasn't overkill. We became embedded in their process, understanding not just what they needed, but why they needed it.
+</p>
+
+<h2>System Architecture</h2>
+
+<p>
+  From our requirements gathering, we designed a layered architecture that separated concerns and ensured security at every level.
+</p>
+
+<p>
+  <strong>The Frontend (WebClient UI)</strong><br>
+  Users interact with a clean, accessible web interface built with user needs in mind. Every action, from viewing programs to creating assignments to managing permissions, flows through this interface.
+</p>
+
+<p>
+  <strong>The Backend (Application Server)</strong><br>
+  The backend handles all system logic using a three-tier layered approach:
+</p>
+
+<ul>
+  <li><strong>Controller Layer</strong> Acts as the entry point, routing requests from the frontend to the appropriate service</li>
+  <li><strong>Service Layer</strong> Contains the core business logic
+    <ul style="margin-top: 0.5rem;">
+      <li>Authentication Service manages user access and role verification</li>
+      <li>Program Service handles program creation, templates, and assignments</li>
+    </ul>
+  </li>
+  <li><strong>Data Access Layer</strong> Manages all database communication, ensuring data consistency and integrity</li>
+</ul>
+
+<div class="architecture-diagram">
+  <div class="diagram-container">
+    <div class="diagram-layer">
+      <div class="diagram-box">WebClient Browser UI<br><span class="diagram-label">(Frontend)</span></div>
+      <div class="arrow"></div>
+    </div>
+
+    <div class="layer-group">
+      <div class="layer-title">Application Server (Backend)</div>
+      
+      <div class="diagram-layer">
+        <div class="diagram-box">ProgramController</div>
+        <div class="arrow"></div>
+      </div>
+
+      <div class="diagram-row two-col">
+        <div class="diagram-box">AuthenticationService</div>
+        <div class="diagram-box">ProgramService</div>
+      </div>
+
+      <div style="width: 100%; text-align: center; margin: 1rem 0;">
+        <div style="display: inline-block; width: 200px; height: 2px; background: #9ca3af; margin: 0 auto;"></div>
+      </div>
+
+      <div class="diagram-layer">
+        <div class="diagram-box">ProgramRepository</div>
+      </div>
+    </div>
+
+    <div class="diagram-layer">
+      <div class="arrow"></div>
+      <div class="diagram-row">
+        <div class="diagram-box solid">Database</div>
+        <div style="margin-left: 2rem;">
+          <div class="diagram-box">EmailService</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>
+  <strong>Why This Matters</strong><br>
+  This layered approach meant that access control was enforced at the service level, not the frontend. Users couldn't bypass permissions by manipulating the UI. The backend verified every request. This design prevented unauthorized access to sensitive program information across all four user roles.
+</p>
+
+<p>
+  <strong>The Result</strong><br>
+  The architecture ensured that kinesiologists could oversee all operations, trainers could manage only their assigned programs, students could assist without modifying data, and participants could only view their own programs. The system enforced these boundaries automatically.
+</p>
 
       <h2>RBAC Design from Real Understanding</h2>
 
