@@ -470,40 +470,53 @@
 
 <div class="architecture-diagram">
   <div class="diagram-container">
+    <!-- Frontend -->
     <div class="diagram-layer">
       <div class="diagram-box">WebClient Browser UI<br><span class="diagram-label">(Frontend)</span></div>
       <div class="arrow"></div>
     </div>
 
+    <!-- Application Server -->
     <div class="layer-group">
       <div class="layer-title">Application Server (Backend)</div>
       
+      <!-- Controller -->
       <div class="diagram-layer">
         <div class="diagram-box">ProgramController</div>
-        <div class="arrow"></div>
       </div>
 
+      <!-- Arrows from controller to services -->
+      <div style="width: 100%; display: flex; justify-content: center; align-items: flex-start; gap: 2rem; margin: 1rem 0;">
+        <div style="width: 2px; height: 1.5rem; background: #9ca3af;"></div>
+        <div style="width: 2px; height: 1.5rem; background: #9ca3af;"></div>
+      </div>
+
+      <!-- Services -->
       <div class="diagram-row two-col">
         <div class="diagram-box">AuthenticationService</div>
         <div class="diagram-box">ProgramService</div>
       </div>
 
-      <div style="width: 100%; text-align: center; margin: 1rem 0;">
-        <div style="display: inline-block; width: 200px; height: 2px; background: #9ca3af; margin: 0 auto;"></div>
+      <!-- Arrows from services to repository -->
+      <div style="width: 100%; display: flex; justify-content: center; align-items: flex-start; gap: 2rem; margin: 1rem 0;">
+        <div style="width: 2px; height: 1.5rem; background: #9ca3af;"></div>
+        <div style="width: 2px; height: 1.5rem; background: #9ca3af;"></div>
       </div>
 
+      <!-- Repository -->
       <div class="diagram-layer">
         <div class="diagram-box">ProgramRepository</div>
       </div>
     </div>
 
-    <div class="diagram-layer">
-      <div class="arrow"></div>
-      <div class="diagram-row">
-        <div class="diagram-box solid">Database</div>
-        <div style="margin-left: 2rem;">
-          <div class="diagram-box">EmailService</div>
-        </div>
+    <!-- Arrows from backend to data -->
+    <div style="width: 2px; height: 2rem; background: #9ca3af; margin: 0 auto;"></div>
+
+    <!-- Data Layer -->
+    <div class="diagram-row">
+      <div class="diagram-box solid">Database</div>
+      <div style="margin-left: 2rem;">
+        <div class="diagram-box">EmailService</div>
       </div>
     </div>
   </div>
